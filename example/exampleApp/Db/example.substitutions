@@ -1,0 +1,5 @@
+file cryojet.template
+{
+pattern { P,   Q, PORT    }
+        { TS-EA-CJET-01, "", CRYO }
+}

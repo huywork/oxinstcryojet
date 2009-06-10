@@ -9,6 +9,7 @@
 # module defined in the RELEASE file is rebuilt.
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
+SUPPORT=/dls_sw/prod/R3.14.8.2/support
 
 # If you don't want to install into $(TOP) then
 # define INSTALL_LOCATION_APP here
@@ -16,6 +17,12 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
 #If using the sequencer, uncomment this line:
 #SNCSEQ=/home/diamond/R3.14.7/prod/support/seq/2-0-10
+
+# External module definitions (prod release).
+#ASYN=	$(SUPPORT)/asyn/4-9
+STREAM=	$(SUPPORT)/streamDevice/2-4dls2-1
+#SSCAN=  $(SUPPORT)/sscan/2-5-6dls1
+#CALC=	$(SUPPORT)/calc/2-6-3dls1
 
 # EPICS_BASE usually appears last so other apps can override stuff:
 EPICS_BASE=/dls_sw/epics/R3.14.8.2/base

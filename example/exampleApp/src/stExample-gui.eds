@@ -1,0 +1,5 @@
+#!/bin/env bash
+export EPICS_CA_SERVER_PORT=6064
+export EPICS_CA_REPEATER_PORT=6065
+#edm -x -eolc -m "P=TS-EA-TEMPC-01,Q=:LINKAM" ODPsu.edl &
+edm -x  -m "P=TS-EA-CJET-01,Q=''" cryojet.edl &

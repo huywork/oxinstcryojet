@@ -1,0 +1,97 @@
+#!$(INSTALL)/bin/$(ARCH)/example_sim
+
+## You may have to change example to something else
+## everywhere it appears in this file
+
+cd "$(INSTALL)"
+
+# Allow use of Backspace in vxWorks monitor
+$(VXWORKS_ONLY)tyBackspaceSet(127)
+
+$(LINUX_ONLY)epicsEnvSet(EPICS_CA_REPEATER_PORT,"6065")
+$(LINUX_ONLY)epicsEnvSet(EPICS_CA_SERVER_PORT,"6064")
+$(VXWORKS_ONLY)putenv("EPICS_CA_SERVER_PORT=6064")
+$(VXWORKS_ONLY)putenv("EPICS_CA_REPEATER_PORT=6065")
+
+
+$(VXWORKS_ONLY)IPSLOTA = 0
+$(VXWORKS_ONLY)IPSLOTB = 1
+$(VXWORKS_ONLY)IPSLOTC = 2
+$(VXWORKS_ONLY)IPSLOTD = 3
+
+###########################################################
+# Load binaries on architectures that need to do so.
+# VXWORKS_ONLY, LINUX_ONLY and RTEMS_ONLY are macros that resolve
+# to a comment symbol on architectures that are not the current
+# build architecture, so they can be used liberally to do architecture
+# specific things. Alternatively, you can include an architecture
+# specific file.
+$(VXWORKS_ONLY)ld < bin/$(ARCH)/example_sim.munch
+
+## This drvTS initializer is needed if the IOC has a hardware event system
+#TSinit
+
+## Register all support components
+dbLoadDatabase("dbd/example_sim.dbd")
+example_sim_registerRecordDeviceDriver(pdbbase)
+
+###########################################################
+# Configure stream device
+#
+$(VXWORKS_ONLY)STREAM_PROTOCOL_DIR = malloc (100)
+$(VXWORKS_ONLY)strcpy (STREAM_PROTOCOL_DIR, "$(OXINSTCRYOJET)/data")
+#$(VXWORKS_ONLY)strcat (STREAM_PROTOCOL_DIR, ":/???/data")
+
+$(LINUX_ONLY)epicsEnvSet("STREAM_PROTOCOL_PATH", "$(OXINSTCRYOJET)/data/")
+$(LINUX_ONLY)epicsEnvSet "PYTHONPATH", "$(STREAM_PROTOCOL_PATH)"
+
+#$(VXWORKS_ONLY)streamDebug = 1
+#var streamDebug 1
+
+
+###########################################################
+# make a stanford simulation device 
+Python("from oxinstcryojet_sim import oxinstCryojet") 
+Python("device1 = oxinstCryojet()")
+ 
+# Python can't return strings to EPICS, so communicate via environment variables 
+# Here we tell start_serial to put the name of the serial port into environment variable my_var 
+Python("device1.start_serial('cjetport1')") 
+drvAsynSerialPortConfigure("CRYO","$(cjetport1)")
+
+# start a debug port on localhost:9006 
+Python("device1.start_debug(9006)")
+Python("device2.start_debug(9007)")
+
+#Python("device.start_ip(9005)")
+#drvAsynIPPortConfigure("CRYO","localhost:9005")
+
+
+###########################################################
+# Configure asyn device
+#
+#drvAsynSerialPortConfigure("CRYO", "/dev/ttyS0",0,0,0)
+#asynSetOption("AMP", 0, "baud", "9600")
+#asynSetOption("AMP", 0, "parity", "none")
+#asynSetOption("AMP", 0, "bits", "8")
+
+# if on a terminal server use:-
+##$(LINUX_ONLY)drvAsynIPPortConfigure("CRYO","172.23.122.4:7005",0,0,0)
+
+#$(VXWORKS_ONLY)asynSetTraceMask("CRYO",-1,0x3)
+#asynSetTraceMask("CRYO",-1,0xF) 
+#asynSetTraceIOMask("CRYO",-1,0x2) 
+
+###########################################################
+
+## Load record instances
+#dbLoadRecords("db/<filename>.db","<List of macros, e.g. user=xxx>")
+dbLoadRecords("db/example.db")
+
+## Set this to see messages from mySub
+#mySubDebug 1
+
+iocInit()
+
+## Start any sequence programs
+#seq sncExample,"user=xxx"
