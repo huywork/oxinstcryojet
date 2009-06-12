@@ -14,6 +14,7 @@ DBD += OxInstCryojet.dbd
 # OxInstCryojet.dbd will be created from these files
 OxInstCryojet_DBD += base.dbd
 OxInstCryojet_DBD += stream.dbd
+OxInstCryojet_DBD += asynRecord.dbd
 
 
 OxInstCryojet_LIBS += stream

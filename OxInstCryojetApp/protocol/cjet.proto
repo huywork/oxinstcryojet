@@ -50,7 +50,7 @@ set_sa_flo{out"K%.1f"; in"K"}
 set_maxv{out"M%.1f"; in"M"}
 set_manv{out"O%.1f"; in"O"}
 set_p{out"P%.2f"; in"P"}
-set_ttemp{out"T%.2f"; in"P"}
+set_ttemp{out"T%.2f"; in"T"}
 
 
 

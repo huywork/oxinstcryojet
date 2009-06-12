@@ -1,5 +1,5 @@
 file cryojet.template
 {
-pattern { P,   Q, PORT    }
-        { TS-EA-CJET-01, "", CRYO }
+pattern { P,   Q, PORT, gda_name, gda_desc    }
+        { TS-EA-CJET-01, "", CRYO, OXINSTCRYOJET, "Cryojet" }
 }

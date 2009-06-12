@@ -3,9 +3,9 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1014
-y 256
-w 440
+x 1019
+y 278
+w 390
 h 530
 font "arial-bold-r-14.0"
 ctlFont "arial-bold-r-14.0"
@@ -39,27 +39,13 @@ fill
 fillColor index 61
 endObjectProperties
 
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 70
-w 420
-h 410
-lineColor index 14
-fillColor index 3
-endObjectProperties
-
 # (Exit Button)
 object activeExitButtonClass
 beginObjectProperties
 major 4
 minor 1
 release 0
-x 330
+x 290
 y 490
 w 90
 h 30
@@ -92,33 +78,15 @@ value {
 autoSize
 endObjectProperties
 
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 20
-y 60
-w 60
-h 20
-font "arial-bold-r-14.0"
-fgColor index 14
-bgColor index 3
-value {
-  "Control"
-}
-endObjectProperties
-
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
 minor 1
 release 0
-x 190
-y 90
-w 60
+x 180
+y 80
+w 70
 h 20
 controlPv "$(P)$(Q):STEMP"
 font "arial-bold-r-14.0"
@@ -140,16 +108,16 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
-y 90
-w 150
+x 120
+y 80
+w 60
 h 20
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Current Temperature"
+  "Current"
 }
 endObjectProperties
 
@@ -159,8 +127,8 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 30
-y 490
+x 10
+y 500
 w 50
 h 20
 fgColor index 43
@@ -181,7 +149,7 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 130
+x 110
 y 40
 w 160
 h 20
@@ -203,16 +171,16 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
-y 150
-w 150
+x 120
+y 120
+w 60
 h 20
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Temperature Error"
+  "Error"
 }
 endObjectProperties
 
@@ -222,9 +190,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 190
-y 150
-w 60
+x 180
+y 120
+w 70
 h 20
 controlPv "$(P)$(Q):TEMP:ERR"
 font "arial-bold-r-14.0"
@@ -246,16 +214,16 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
-y 120
-w 150
+x 120
+y 100
+w 60
 h 20
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Target Temperature"
+  "Target"
 }
 endObjectProperties
 
@@ -265,9 +233,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 190
-y 120
-w 60
+x 180
+y 100
+w 70
 h 20
 controlPv "$(P)$(Q):TTEMP"
 font "arial-bold-r-14.0"
@@ -290,8 +258,8 @@ major 4
 minor 1
 release 0
 x 250
-y 120
-w 60
+y 100
+w 70
 h 20
 controlPv "$(P)$(Q):TTEMP:SET"
 font "arial-bold-r-14.0"
@@ -302,6 +270,7 @@ bgColor index 6
 editable
 limitsFromDb
 nullColor index 14
+useKp
 useHexPrefix
 newPos
 objType "controls"
@@ -314,8 +283,8 @@ major 4
 minor 1
 release 0
 x 250
-y 190
-w 60
+y 170
+w 70
 h 20
 controlPv "$(P)$(Q):P:SET"
 font "arial-bold-r-14.0"
@@ -326,6 +295,7 @@ bgColor index 6
 editable
 limitsFromDb
 nullColor index 14
+useKp
 useHexPrefix
 newPos
 objType "controls"
@@ -337,9 +307,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 190
-y 190
-w 60
+x 180
+y 170
+w 70
 h 20
 controlPv "$(P)$(Q):P"
 font "arial-bold-r-14.0"
@@ -361,9 +331,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
-y 190
-w 150
+x 40
+y 170
+w 140
 h 20
 font "arial-bold-r-14.0"
 fgColor index 14
@@ -381,8 +351,8 @@ major 4
 minor 1
 release 0
 x 250
-y 210
-w 60
+y 190
+w 70
 h 20
 controlPv "$(P)$(Q):I:SET"
 font "arial-bold-r-14.0"
@@ -393,6 +363,7 @@ bgColor index 6
 editable
 limitsFromDb
 nullColor index 14
+useKp
 useHexPrefix
 newPos
 objType "controls"
@@ -404,9 +375,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 190
-y 210
-w 60
+x 180
+y 190
+w 70
 h 20
 controlPv "$(P)$(Q):I"
 font "arial-bold-r-14.0"
@@ -428,9 +399,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
-y 210
-w 150
+x 40
+y 190
+w 140
 h 20
 font "arial-bold-r-14.0"
 fgColor index 14
@@ -447,9 +418,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 190
-y 230
-w 60
+x 180
+y 210
+w 70
 h 20
 controlPv "$(P)$(Q):D"
 font "arial-bold-r-14.0"
@@ -471,9 +442,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
-y 230
-w 150
+x 40
+y 210
+w 140
 h 20
 font "arial-bold-r-14.0"
 fgColor index 14
@@ -490,9 +461,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 190
+x 180
 y 260
-w 60
+w 70
 h 20
 controlPv "$(P)$(Q):SHIELDFLW"
 font "arial-bold-r-14.0"
@@ -514,16 +485,16 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
+x 40
 y 260
-w 150
+w 60
 h 20
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Shield Flow"
+  "Shield"
 }
 endObjectProperties
 
@@ -535,7 +506,7 @@ minor 1
 release 0
 x 250
 y 260
-w 60
+w 70
 h 20
 controlPv "$(P)$(Q):SHIELDFLW:SET"
 font "arial-bold-r-14.0"
@@ -546,6 +517,7 @@ bgColor index 6
 editable
 limitsFromDb
 nullColor index 14
+useKp
 useHexPrefix
 newPos
 objType "controls"
@@ -557,9 +529,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 190
+x 180
 y 280
-w 60
+w 70
 h 20
 controlPv "$(P)$(Q):SAMPLEFLW"
 font "arial-bold-r-14.0"
@@ -581,16 +553,16 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
+x 40
 y 280
-w 150
+w 70
 h 20
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Sample Flow"
+  "Sample"
 }
 endObjectProperties
 
@@ -602,7 +574,7 @@ minor 1
 release 0
 x 250
 y 280
-w 60
+w 70
 h 20
 controlPv "$(P)$(Q):SAMPLEFLW:SET"
 font "arial-bold-r-14.0"
@@ -613,6 +585,7 @@ bgColor index 6
 editable
 limitsFromDb
 nullColor index 14
+useKp
 useHexPrefix
 newPos
 objType "controls"
@@ -624,16 +597,16 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
-y 350
-w 150
+x 210
+y 330
+w 100
 h 20
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Heater Voltage Limit"
+  "Voltage Limit"
 }
 endObjectProperties
 
@@ -643,9 +616,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 250
-y 350
-w 60
+x 310
+y 330
+w 70
 h 20
 controlPv "$(P)$(Q):MAXV:SET"
 font "arial-bold-r-14.0"
@@ -656,6 +629,7 @@ bgColor index 6
 editable
 limitsFromDb
 nullColor index 14
+useKp
 useHexPrefix
 newPos
 objType "controls"
@@ -668,8 +642,8 @@ major 4
 minor 1
 release 0
 x 250
-y 370
-w 60
+y 390
+w 70
 h 20
 controlPv "$(P)$(Q):MANV:SET"
 font "arial-bold-r-14.0"
@@ -680,6 +654,7 @@ bgColor index 6
 editable
 limitsFromDb
 nullColor index 14
+useKp
 useHexPrefix
 newPos
 objType "controls"
@@ -691,8 +666,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
-y 370
+x 60
+y 390
 w 160
 h 20
 font "arial-bold-r-14.0"
@@ -700,7 +675,7 @@ fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Heater Manual Voltage"
+  "Manual Voltage"
 }
 endObjectProperties
 
@@ -710,9 +685,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 300
-y 400
-w 120
+x 250
+y 370
+w 130
 h 20
 fgColor index 25
 fgAlarm
@@ -724,35 +699,15 @@ controlPv "$(P)$(Q):ACTIVITY:SET"
 font "arial-bold-r-14.0"
 endObjectProperties
 
-# (Menu Button)
-object activeMenuButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 300
-y 420
-w 120
-h 20
-fgColor index 25
-fgAlarm
-bgColor index 3
-inconsistentColor index 3
-topShadowColor index 1
-botShadowColor index 11
-controlPv "$(P)$(Q):CTRL:SET"
-font "arial-bold-r-14.0"
-endObjectProperties
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
-y 400
-w 170
+x 40
+y 370
+w 90
 h 20
 font "arial-bold-r-14.0"
 fgColor index 14
@@ -763,34 +718,15 @@ value {
 }
 endObjectProperties
 
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 30
-y 420
-w 180
-h 20
-font "arial-bold-r-14.0"
-fgColor index 14
-bgColor index 3
-useDisplayBg
-value {
-  "Control (PC/front panel)"
-}
-endObjectProperties
-
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
 minor 1
 release 0
-x 190
-y 310
-w 60
+x 120
+y 330
+w 70
 h 20
 controlPv "$(P)$(Q):HEATERV"
 font "arial-bold-r-14.0"
@@ -812,16 +748,16 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
-y 310
-w 160
+x 40
+y 330
+w 90
 h 20
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Heater Voltage"
+  "Voltage"
 }
 endObjectProperties
 
@@ -831,9 +767,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 190
-y 330
-w 60
+x 120
+y 350
+w 70
 h 20
 controlPv "$(P)$(Q):HEATERP"
 font "arial-bold-r-14.0"
@@ -855,16 +791,16 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
-y 330
-w 160
+x 40
+y 350
+w 90
 h 20
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Heater Output"
+  "Output"
 }
 endObjectProperties
 
@@ -875,8 +811,8 @@ major 4
 minor 1
 release 0
 x 250
-y 230
-w 60
+y 210
+w 70
 h 20
 controlPv "$(P)$(Q):D:SET"
 font "arial-bold-r-14.0"
@@ -887,6 +823,7 @@ bgColor index 6
 editable
 limitsFromDb
 nullColor index 14
+useKp
 useHexPrefix
 newPos
 objType "controls"
@@ -898,9 +835,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 200
-y 400
-w 100
+x 120
+y 370
+w 130
 h 20
 controlPv "$(P)$(Q):ACTIVITY"
 font "arial-bold-r-14.0"
@@ -922,9 +859,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 200
-y 420
-w 100
+x 120
+y 450
+w 130
 h 20
 controlPv "$(P)$(Q):CTRL"
 font "arial-bold-r-14.0"
@@ -946,8 +883,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
-y 450
+x 10
+y 420
 w 160
 h 20
 font "arial-bold-r-14.0"
@@ -965,9 +902,9 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 190
-y 450
-w 60
+x 160
+y 420
+w 90
 h 20
 controlPv "$(P)$(Q):CHANFREQ"
 font "arial-bold-r-14.0"
@@ -981,5 +918,120 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 10
+y 70
+w 110
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Temperature"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 10
+y 150
+w 150
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "PID Parameters"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 10
+y 240
+w 150
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Flows"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 10
+y 310
+w 150
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Heater"
+}
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 250
+y 450
+w 130
+h 20
+fgColor index 25
+fgAlarm
+bgColor index 3
+inconsistentColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(P)$(Q):CTRL:SET"
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 10
+y 450
+w 110
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Control Source"
+}
 endObjectProperties
 

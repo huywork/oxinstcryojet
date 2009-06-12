@@ -4,7 +4,6 @@
 #! DBDEND
 
 
-
 record(ao, "$(P)$(Q):P:SET") {
   field(DESC, "Set PID P")
   field(SCAN, "Passive")
@@ -82,9 +81,8 @@ record(ao, "$(P)$(Q):MANV:SET") {
   field(DRVL, "0")
 }
 
-
 record(bo, "$(P)$(Q):ACTIVITY:SET") {
-  field(DESC, "Set ctrl or man")
+  field(DESC, "Set auto or man")
   field(SCAN, "Passive")
   field(DTYP, "stream")
   field(OUT, "@cjet.proto set_act $(PORT) 0")
@@ -92,6 +90,8 @@ record(bo, "$(P)$(Q):ACTIVITY:SET") {
   field(ONAM, "Auto")
 }
 
+#% gdatag,template,simplePv,$(gda_name),$(gda_desc)
+#% gdatag,pv,rw,$(gda_name),RECORD
 record(ao, "$(P)$(Q):TTEMP:SET") {
   field(DESC, "Set target temp")
   field(SCAN, "Passive")
@@ -103,7 +103,6 @@ record(ao, "$(P)$(Q):TTEMP:SET") {
   field(DRVL, "0")
 }
 
-
 record(bi, "$(P)$(Q):ACTIVITY") {
   field(DESC, "Get status")
   field(SCAN, "Passive")
@@ -113,7 +112,6 @@ record(bi, "$(P)$(Q):ACTIVITY") {
   field(ONAM, "Auto")
 }
 
-
 record(mbbi, "$(P)$(Q):CTRL") {
   field(DESC, "Get control")
   field(DTYP, "Soft Channel")
@@ -121,12 +119,11 @@ record(mbbi, "$(P)$(Q):CTRL") {
   field(ONVL, "1")
   field(TWVL, "2")
   field(THVL, "3")
-  field(ZRST, "Local & locked")
-  field(ONST, "Remote(PC) & Locked")
-  field(TWST, "Local & Unlocked")
-  field(THST, "Remote(PC) & Unlocked")
+  field(ZRST, "FPLock")
+  field(ONST, "EPICS+FPLock")
+  field(TWST, "FPUnlock")
+  field(THST, "EPICS+FPUnlock")
 }
-
 
 record(mbbo, "$(P)$(Q):CTRL:SET") {
   field(DESC, "Set control")
@@ -139,12 +136,11 @@ record(mbbo, "$(P)$(Q):CTRL:SET") {
   field(ONVL, "1")
   field(TWVL, "2")
   field(THVL, "3")
-  field(ZRST, "Local & Locked")
-  field(ONST, "Remote(PC) & Locked")
-  field(TWST, "Local & Unlocked")
-  field(THST, "Remote(PC) & Unlocked")
+  field(ZRST, "FPLock")
+  field(ONST, "EPICS+FPLock")
+  field(TWST, "FPUnlock")
+  field(THST, "EPICS+FPUnlock")
 }
-
 
 record(ai, "$(P)$(Q):TTEMP") {
   field(DESC, "Get tagret temp")
@@ -154,6 +150,7 @@ record(ai, "$(P)$(Q):TTEMP") {
   field(PREC, "2")
   field(HOPR, "999.99")
   field(LOPR, "0")
+  field(EGU, "K")
 }
 
 record(ai, "$(P)$(Q):STEMP") {
@@ -164,6 +161,7 @@ record(ai, "$(P)$(Q):STEMP") {
   field(PREC, "2")
   field(HOPR, "999.99")
   field(LOPR, "0")
+  field(EGU, "K")
 }
 
 record(ai, "$(P)$(Q):TEMP:ERR") {
@@ -174,8 +172,8 @@ record(ai, "$(P)$(Q):TEMP:ERR") {
   field(PREC, "2")
   field(HOPR, "999.99")
   field(LOPR, "-999.99")
+  field(EGU, "K")
 }
-
 
 record(ai, "$(P)$(Q):HEATERP") {
   field(DESC, "Get heater %")
@@ -258,30 +256,102 @@ record(ai, "$(P)$(Q):CHANFREQ") {
   field(HOPR, "100000")
   field(LOPR, "0")
   field(ASLO, "4")
+  field(EGU, "Hz")
+}
+
+record(bo, "$(P)$(Q):DISABLE") {
+  field(DESC, "Disable comms")
+  field(PINI, "YES")
+  field(VAL, "1")
+  field(OMSL, "supervisory")
+  field(ZNAM, "Enabled")
+  field(ONAM, "Disabled")
+}
+
+record(asyn, "$(P)$(Q):ASYN") {
+  field(PORT, "$(PORT)")
+}
+
+record(fanout, "$(P)$(Q):FAN2") {
+  field(FLNK, "$(P)$(Q):CHANFREQ")
+  field(LNK1, "$(P)$(Q):HEATERP")
+  field(LNK2, "$(P)$(Q):SHIELDFLW")
+  field(LNK3, "$(P)$(Q):SAMPLEFLW")
+  field(LNK4, "$(P)$(Q):HEATERV")
+  field(LNK5, "$(P)$(Q):ACTIVITY")
+  field(LNK6, "$(P)$(Q):CTRL")
+}
+
+record(fanout, "$(P)$(Q):FAN1") {
+  field(SCAN, "2 second")
+  field(SDIS, "$(P)$(Q):DISABLE")
+  field(FLNK, "$(P)$(Q):FAN2")
+  field(SELM, "All")
+  field(LNK1, "$(P)$(Q):P")
+  field(LNK2, "$(P)$(Q):I")
+  field(LNK3, "$(P)$(Q):D")
+  field(LNK4, "$(P)$(Q):TTEMP")
+  field(LNK5, "$(P)$(Q):STEMP")
+  field(LNK6, "$(P)$(Q):TEMP:ERR")
 }
 
 #! Further lines contain data used by VisualDCT
-#! View(4104,4231,1.0)
-#! Record("$(P)$(Q):P:SET",4280,3672,0,1,"$(P)$(Q):P:SET")
-#! Record("$(P)$(Q):I:SET",4460,3672,0,1,"$(P)$(Q):I:SET")
-#! Record("$(P)$(Q):D:SET",4640,3672,0,1,"$(P)$(Q):D:SET")
-#! Record("$(P)$(Q):MAXV:SET",4280,3872,0,1,"$(P)$(Q):MAXV:SET")
-#! Record("$(P)$(Q):SHIELDFLW:SET",4460,3872,0,1,"$(P)$(Q):SHIELDFLW:SET")
-#! Record("$(P)$(Q):SAMPLEFLW:SET",4640,3872,0,1,"$(P)$(Q):SAMPLEFLW:SET")
-#! Record("$(P)$(Q):MANV:SET",4820,3872,0,1,"$(P)$(Q):MANV:SET")
-#! Record("$(P)$(Q):ACTIVITY:SET",4280,4060,0,1,"$(P)$(Q):ACTIVITY:SET")
-#! Record("$(P)$(Q):TTEMP:SET",4820,3672,0,1,"$(P)$(Q):TTEMP:SET")
-#! Record("$(P)$(Q):ACTIVITY",4280,4780,0,1,"$(P)$(Q):ACTIVITY")
-#! Record("$(P)$(Q):CTRL",4460,4785,0,1,"$(P)$(Q):CTRL")
-#! Record("$(P)$(Q):CTRL:SET",4460,4069,0,1,"$(P)$(Q):CTRL:SET")
-#! Record("$(P)$(Q):TTEMP",4820,4406,0,1,"$(P)$(Q):TTEMP")
-#! Record("$(P)$(Q):STEMP",5000,4406,0,1,"$(P)$(Q):STEMP")
-#! Record("$(P)$(Q):TEMP:ERR",5180,4406,0,1,"$(P)$(Q):TEMP:ERR")
-#! Record("$(P)$(Q):HEATERP",4280,4572,0,1,"$(P)$(Q):HEATERP")
-#! Record("$(P)$(Q):HEATERV",4820,4572,0,1,"$(P)$(Q):HEATERV")
-#! Record("$(P)$(Q):P",4280,4406,0,1,"$(P)$(Q):P")
-#! Record("$(P)$(Q):I",4460,4406,0,1,"$(P)$(Q):I")
-#! Record("$(P)$(Q):D",4640,4406,0,1,"$(P)$(Q):D")
-#! Record("$(P)$(Q):SHIELDFLW",4460,4586,0,1,"$(P)$(Q):SHIELDFLW")
-#! Record("$(P)$(Q):SAMPLEFLW",4640,4586,0,1,"$(P)$(Q):SAMPLEFLW")
-#! Record("$(P)$(Q):CHANFREQ",4640,4772,0,1,"$(P)$(Q):CHANFREQ")
+#! View(3193,3250,0.8)
+#! Record("$(P)$(Q):P:SET",4440,3630,0,1,"$(P)$(Q):P:SET")
+#! Record("$(P)$(Q):I:SET",4620,3630,0,1,"$(P)$(Q):I:SET")
+#! Record("$(P)$(Q):D:SET",4800,3630,0,1,"$(P)$(Q):D:SET")
+#! Record("$(P)$(Q):MAXV:SET",4440,3830,0,1,"$(P)$(Q):MAXV:SET")
+#! Record("$(P)$(Q):SHIELDFLW:SET",4620,3830,0,1,"$(P)$(Q):SHIELDFLW:SET")
+#! Record("$(P)$(Q):SAMPLEFLW:SET",4800,3830,0,1,"$(P)$(Q):SAMPLEFLW:SET")
+#! Record("$(P)$(Q):MANV:SET",4980,3830,0,1,"$(P)$(Q):MANV:SET")
+#! Record("$(P)$(Q):ACTIVITY:SET",4440,4019,0,1,"$(P)$(Q):ACTIVITY:SET")
+#! Record("$(P)$(Q):TTEMP:SET",4980,3630,0,1,"$(P)$(Q):TTEMP:SET")
+#! Record("$(P)$(Q):ACTIVITY",5140,4819,0,0,"$(P)$(Q):ACTIVITY")
+#! Record("$(P)$(Q):CTRL",5360,4823,0,0,"$(P)$(Q):CTRL")
+#! Record("$(P)$(Q):CTRL:SET",4620,4027,0,1,"$(P)$(Q):CTRL:SET")
+#! Record("$(P)$(Q):TTEMP",4940,4430,0,0,"$(P)$(Q):TTEMP")
+#! Record("$(P)$(Q):STEMP",5160,4430,0,0,"$(P)$(Q):STEMP")
+#! Record("$(P)$(Q):TEMP:ERR",5400,4430,0,0,"$(P)$(Q):TEMP:ERR")
+#! Record("$(P)$(Q):HEATERP",4260,4830,0,0,"$(P)$(Q):HEATERP")
+#! Record("$(P)$(Q):HEATERV",4920,4810,0,0,"$(P)$(Q):HEATERV")
+#! Record("$(P)$(Q):P",4280,4445,0,0,"$(P)$(Q):P")
+#! Record("$(P)$(Q):I",4500,4445,0,0,"$(P)$(Q):I")
+#! Record("$(P)$(Q):D",4720,4445,0,0,"$(P)$(Q):D")
+#! Record("$(P)$(Q):SHIELDFLW",4480,4825,0,0,"$(P)$(Q):SHIELDFLW")
+#! Record("$(P)$(Q):SAMPLEFLW",4700,4825,0,0,"$(P)$(Q):SAMPLEFLW")
+#! Record("$(P)$(Q):CHANFREQ",5580,4797,0,0,"$(P)$(Q):CHANFREQ")
+#! Record("$(P)$(Q):DISABLE",3900,4239,0,1,"$(P)$(Q):DISABLE")
+#! Field("$(P)$(Q):DISABLE.VAL",16777215,0,"$(P)$(Q):DISABLE.VAL")
+#! Record("$(P)$(Q):ASYN",3900,4069,0,1,"$(P)$(Q):ASYN")
+#! Record("$(P)$(Q):FAN2",3940,4825,0,0,"$(P)$(Q):FAN2")
+#! Field("$(P)$(Q):FAN2.LNK1",16777215,1,"$(P)$(Q):FAN2.LNK1")
+#! Link("$(P)$(Q):FAN2.LNK1","$(P)$(Q):HEATERP")
+#! Field("$(P)$(Q):FAN2.LNK2",16777215,1,"$(P)$(Q):FAN2.LNK2")
+#! Link("$(P)$(Q):FAN2.LNK2","$(P)$(Q):SHIELDFLW")
+#! Field("$(P)$(Q):FAN2.LNK3",16777215,1,"$(P)$(Q):FAN2.LNK3")
+#! Link("$(P)$(Q):FAN2.LNK3","$(P)$(Q):SAMPLEFLW")
+#! Field("$(P)$(Q):FAN2.LNK4",16777215,1,"$(P)$(Q):FAN2.LNK4")
+#! Link("$(P)$(Q):FAN2.LNK4","$(P)$(Q):HEATERV")
+#! Field("$(P)$(Q):FAN2.LNK5",16777215,1,"$(P)$(Q):FAN2.LNK5")
+#! Link("$(P)$(Q):FAN2.LNK5","$(P)$(Q):ACTIVITY")
+#! Field("$(P)$(Q):FAN2.LNK6",16777215,1,"$(P)$(Q):FAN2.LNK6")
+#! Link("$(P)$(Q):FAN2.LNK6","$(P)$(Q):CTRL")
+#! Field("$(P)$(Q):FAN2.FLNK",16777215,1,"$(P)$(Q):FAN2.FLNK")
+#! Link("$(P)$(Q):FAN2.FLNK","$(P)$(Q):CHANFREQ")
+#! Record("$(P)$(Q):FAN1",4000,4443,0,1,"$(P)$(Q):FAN1")
+#! Field("$(P)$(Q):FAN1.LNK1",16777215,1,"$(P)$(Q):FAN1.LNK1")
+#! Link("$(P)$(Q):FAN1.LNK1","$(P)$(Q):P")
+#! Field("$(P)$(Q):FAN1.LNK2",16777215,1,"$(P)$(Q):FAN1.LNK2")
+#! Link("$(P)$(Q):FAN1.LNK2","$(P)$(Q):I")
+#! Field("$(P)$(Q):FAN1.LNK3",16777215,1,"$(P)$(Q):FAN1.LNK3")
+#! Link("$(P)$(Q):FAN1.LNK3","$(P)$(Q):D")
+#! Field("$(P)$(Q):FAN1.LNK4",16777215,1,"$(P)$(Q):FAN1.LNK4")
+#! Link("$(P)$(Q):FAN1.LNK4","$(P)$(Q):TTEMP")
+#! Field("$(P)$(Q):FAN1.LNK5",16777215,1,"$(P)$(Q):FAN1.LNK5")
+#! Link("$(P)$(Q):FAN1.LNK5","$(P)$(Q):STEMP")
+#! Field("$(P)$(Q):FAN1.LNK6",16777215,1,"$(P)$(Q):FAN1.LNK6")
+#! Link("$(P)$(Q):FAN1.LNK6","$(P)$(Q):TEMP:ERR")
+#! Field("$(P)$(Q):FAN1.SDIS",16777215,0,"$(P)$(Q):FAN1.SDIS")
+#! Link("$(P)$(Q):FAN1.SDIS","$(P)$(Q):DISABLE.VAL")
+#! Field("$(P)$(Q):FAN1.FLNK",16777215,0,"$(P)$(Q):FAN1.FLNK")
+#! Link("$(P)$(Q):FAN1.FLNK","$(P)$(Q):FAN2")
