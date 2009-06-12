@@ -15,9 +15,11 @@ DBD += OxInstCryojet.dbd
 OxInstCryojet_DBD += base.dbd
 OxInstCryojet_DBD += stream.dbd
 OxInstCryojet_DBD += asynRecord.dbd
+OxInstCryojet_DBD += calc.dbd
 
 
 OxInstCryojet_LIBS += stream
+OxInstCryojet_LIBS += calc
 OxInstCryojet_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 #DATA += OxInstCryojet_sim.py

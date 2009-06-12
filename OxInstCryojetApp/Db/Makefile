@@ -12,6 +12,7 @@ include $(TOP)/configure/CONFIG
 # templates like this
 #
 DB += cryojet.template
+DB += ILM201.template
 
 #----------------------------------------------------
 # In a Diamond IOC Application, build db files from
