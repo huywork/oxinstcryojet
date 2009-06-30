@@ -22,7 +22,7 @@ OxInstCryojet_LIBS += stream
 OxInstCryojet_LIBS += calc
 OxInstCryojet_LIBS += $(EPICS_BASE_IOC_LIBS)
 
-#DATA += OxInstCryojet_sim.py
+DATA += OxInstCryojet_sim.py
 
 
 include $(TOP)/configure/RULES

@@ -4,6 +4,9 @@
 #! DBDEND
 
 
+#% gdatag,template,OxInstCryojet,$(gda_name),$(gda_desc)
+#% gdatag,pv,rw,$(gda_name),PGAIN_SET
+#% autosave 1 VAL
 record(ao, "$(P)$(Q):P:SET") {
   field(DESC, "Set PID P")
   field(SCAN, "Passive")
@@ -15,6 +18,8 @@ record(ao, "$(P)$(Q):P:SET") {
   field(DRVL, "0")
 }
 
+#% gdatag,pv,rw,$(gda_name),IGAIN_SET
+#% autosave 1 VAL
 record(ao, "$(P)$(Q):I:SET") {
   field(DESC, "Set PID I")
   field(SCAN, "Passive")
@@ -26,6 +31,8 @@ record(ao, "$(P)$(Q):I:SET") {
   field(DRVL, "0")
 }
 
+#% gdatag,pv,rw,$(gda_name),DGAIN_SET
+#% autosave 1 VAL
 record(ao, "$(P)$(Q):D:SET") {
   field(DESC, "Set PID D")
   field(SCAN, "Passive")
@@ -37,6 +44,7 @@ record(ao, "$(P)$(Q):D:SET") {
   field(DRVL, "0")
 }
 
+#% autosave 1 VAL
 record(ao, "$(P)$(Q):MAXV:SET") {
   field(DESC, "Set max htr v")
   field(SCAN, "Passive")
@@ -48,6 +56,8 @@ record(ao, "$(P)$(Q):MAXV:SET") {
   field(DRVL, "0")
 }
 
+#% gdatag,pv,rw,$(gda_name),SHIELDFLOW_SET
+#% autosave 1 VAL
 record(ao, "$(P)$(Q):SHIELDFLW:SET") {
   field(DESC, "Set shield flow")
   field(SCAN, "Passive")
@@ -59,6 +69,8 @@ record(ao, "$(P)$(Q):SHIELDFLW:SET") {
   field(DRVL, "0")
 }
 
+#% gdatag,pv,rw,$(gda_name),SAMPLEFLOW_SET
+#% autosave 1 VAL
 record(ao, "$(P)$(Q):SAMPLEFLW:SET") {
   field(DESC, "Set sample flow")
   field(SCAN, "Passive")
@@ -70,6 +82,7 @@ record(ao, "$(P)$(Q):SAMPLEFLW:SET") {
   field(DRVL, "0")
 }
 
+#% autosave 1 VAL
 record(ao, "$(P)$(Q):MANV:SET") {
   field(DESC, "Set man htr v")
   field(SCAN, "Passive")
@@ -81,6 +94,7 @@ record(ao, "$(P)$(Q):MANV:SET") {
   field(DRVL, "0")
 }
 
+#% autosave 1 VAL
 record(bo, "$(P)$(Q):ACTIVITY:SET") {
   field(DESC, "Set auto or man")
   field(SCAN, "Passive")
@@ -90,8 +104,8 @@ record(bo, "$(P)$(Q):ACTIVITY:SET") {
   field(ONAM, "Auto")
 }
 
-#% gdatag,template,simplePv,$(gda_name),$(gda_desc)
-#% gdatag,pv,rw,$(gda_name),RECORD
+#% gdatag,pv,rw,$(gda_name),TEMP_SET
+#% autosave 1 VAL
 record(ao, "$(P)$(Q):TTEMP:SET") {
   field(DESC, "Set target temp")
   field(SCAN, "Passive")
@@ -125,6 +139,7 @@ record(mbbi, "$(P)$(Q):CTRL") {
   field(THST, "EPICS+FPUnlock")
 }
 
+#% autosave 1 VAL
 record(mbbo, "$(P)$(Q):CTRL:SET") {
   field(DESC, "Set control")
   field(SCAN, "Passive")
@@ -153,6 +168,8 @@ record(ai, "$(P)$(Q):TTEMP") {
   field(EGU, "K")
 }
 
+#% gdatag,pv,ro,$(gda_name),SENSOR_TEMP
+#% archiver 10 Monitor
 record(ai, "$(P)$(Q):STEMP") {
   field(DESC, "Get sensor temp")
   field(SCAN, "Passive")
@@ -259,6 +276,7 @@ record(ai, "$(P)$(Q):CHANFREQ") {
   field(EGU, "Hz")
 }
 
+# % gdatag,binary,rw,$(gda_name),DISABLE
 record(bo, "$(P)$(Q):DISABLE") {
   field(DESC, "Disable comms")
   field(PINI, "YES")

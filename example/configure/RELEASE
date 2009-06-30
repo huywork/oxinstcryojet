@@ -27,6 +27,8 @@ PYIOC=  $(SUPPORT)/pyIoc/1-2
 #SSCAN=  $(SUPPORT)/sscan/2-5-6dls1
 #CALC=	$(SUPPORT)/calc/2-6-3dls1
 
+GDA=    $(SUPPORT)/gda/2009-4
+
 # EPICS_BASE usually appears last so other apps can override stuff:
 EPICS_BASE=/dls_sw/epics/R3.14.8.2/base
 

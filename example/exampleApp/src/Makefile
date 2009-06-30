@@ -78,5 +78,15 @@ example_sim_LIBS += PythonEmbed
 example_LIBS += $(EPICS_BASE_IOC_LIBS)
 example_sim_LIBS += $(EPICS_BASE_IOC_LIBS)
 
-
 include $(TOP)/configure/RULES
+
+USES_DB = $(TOP)/db/example.db
+parser-example : $(USES_DB) 
+	@echo "Installing postprocessor files $(USES_DB)" 
+	epicsparser.py $(USES_DB) -r example > $@ 
+	xmllint --schema $(GDA)/data/genericBeamlineSchema.xsd example-gda-interface.xml > /dev/null 
+	@echo "Installing postprocessor files" 
+	@$(INSTALL_PRODUCT) -d -m 555 example* $(INSTALL_DATA)
+         
+#buildInstall: parser-example
+

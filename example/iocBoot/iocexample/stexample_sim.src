@@ -51,8 +51,8 @@ $(LINUX_ONLY)epicsEnvSet "PYTHONPATH", "$(STREAM_PROTOCOL_PATH)"
 
 ###########################################################
 # make a stanford simulation device 
-Python("from oxinstcryojet_sim import oxinstCryojet") 
-Python("device1 = oxinstCryojet()")
+Python("from OxInstCryojet_sim import OxInstCryojet") 
+Python("device1 = OxInstCryojet()")
  
 # Python can't return strings to EPICS, so communicate via environment variables 
 # Here we tell start_serial to put the name of the serial port into environment variable my_var 
@@ -61,7 +61,6 @@ drvAsynSerialPortConfigure("CRYO","$(cjetport1)")
 
 # start a debug port on localhost:9006 
 Python("device1.start_debug(9006)")
-Python("device2.start_debug(9007)")
 
 #Python("device.start_ip(9005)")
 #drvAsynIPPortConfigure("CRYO","localhost:9005")
