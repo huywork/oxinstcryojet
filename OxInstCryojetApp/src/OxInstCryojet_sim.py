@@ -2,14 +2,14 @@
 
 # require a fixed version of serial_sim to be imported
 from pkg_resources import require
-require("dls.serial_sim==1.6")
-from dls.serial_sim import serial_device
+require("dls_serial_sim==1.7")
+from dls_serial_sim import serial_device
 
 # create a class that represents the device
 class OxInstCryojet(serial_device):
 	# set the terminator to control when a string is passed to reply
 	Terminator = "\r"
-        # create an internal dict of values 
+	# create an internal dict of values 
 	# implement a reply function			
 	def __init__(self):
 		self.vals = { "R0":80, "R1":77, "R4":3, "R5":50, "R6":10, "R8":55, "R9":44, "R10":33, "R11":100, "R18":21, "R19":31} 
@@ -59,12 +59,21 @@ class OxInstCryojet(serial_device):
 				return 'R' + str(self.vals[command]) 
 			else:
 				# error
-                                print 'error'
+				print 'error'
 				return '?' + command
 		except:
 			# error
-                        print 'error'
+			print 'error'
 			return '?' + command
+
+	def command(self, text):
+		'''Interface function for commands from the test suite.'''
+        #print text
+		args = text.split()
+		if args[0] == "getcurrtemp":
+			self.response("currtemp %f" % self.vals["R1"])
+		else:
+			serial_device.command(self, text)
 			
 
 if __name__ == "__main__":
