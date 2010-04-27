@@ -75,19 +75,19 @@ record(scalcout, "$(P):LEVEL") {
 record(bo, "$(P):DISABLE") {
   field(DESC, "Disable comms")
   field(PINI, "YES")
-  field(VAL, "1")
+  field(VAL, "$(DISABLED=1)")
   field(OMSL, "supervisory")
   field(ZNAM, "Enabled")
   field(ONAM, "Disabled")
 }
 
 #! Further lines contain data used by VisualDCT
-#! View(0,0,1.0)
+#! View(564,0,1.4)
 #! Record("$(P):RAWLEVEL",20,28,0,0,"$(P):RAWLEVEL")
 #! Field("$(P):RAWLEVEL.SDIS",16777215,1,"$(P):RAWLEVEL.SDIS")
 #! Link("$(P):RAWLEVEL.SDIS","$(P):DISABLE.VAL")
 #! Field("$(P):RAWLEVEL.AINP",16777215,0,"$(P):RAWLEVEL.AINP")
-#! Record("$(P):RAWLEVELBUF",260,19,0,0,"$(P):RAWLEVELBUF")
+#! Record("$(P):RAWLEVELBUF",260,18,0,0,"$(P):RAWLEVELBUF")
 #! Field("$(P):RAWLEVELBUF.OVAL",16777215,0,"$(P):RAWLEVELBUF.OVAL")
 #! Field("$(P):RAWLEVELBUF.INPA",16777215,0,"$(P):RAWLEVELBUF.INPA")
 #! Link("$(P):RAWLEVELBUF.INPA","$(P):RAWLEVELBUF.OVAL")
@@ -96,7 +96,7 @@ record(bo, "$(P):DISABLE") {
 #! Field("$(P):RAWLEVELBUF.SVAL",16777215,0,"$(P):RAWLEVELBUF.SVAL")
 #! Field("$(P):RAWLEVELBUF.INBB",16777215,0,"$(P):RAWLEVELBUF.INBB")
 #! Link("$(P):RAWLEVELBUF.INBB","$(P):RAWLEVELBUF.SVAL")
-#! Record("$(P):LEVEL",500,21,0,0,"$(P):LEVEL")
+#! Record("$(P):LEVEL",500,20,0,0,"$(P):LEVEL")
 #! Field("$(P):LEVEL.INAA",16777215,0,"$(P):LEVEL.INAA")
 #! Link("$(P):LEVEL.INAA","$(P):RAWLEVELBUF.SVAL")
 #! Record("$(P):DISABLE",740,20,0,0,"$(P):DISABLE")
