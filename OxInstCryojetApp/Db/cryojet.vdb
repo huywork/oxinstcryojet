@@ -280,7 +280,7 @@ record(ai, "$(P)$(Q):CHANFREQ") {
 record(bo, "$(P)$(Q):DISABLE") {
   field(DESC, "Disable comms")
   field(PINI, "YES")
-  field(VAL, "1")
+  field(VAL, "$(DISABLED=1)")
   field(OMSL, "supervisory")
   field(ZNAM, "Enabled")
   field(ONAM, "Disabled")
