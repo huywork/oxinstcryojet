@@ -1,9 +1,9 @@
-#!/bin/env python2.4
+#!/bin/env python2.6
 
 # require a fixed version of serial_sim to be imported
 from pkg_resources import require
-require("dls_serial_sim==1.7")
-from dls_serial_sim import serial_device
+require("dls_serial_sim")
+from dls_serial_sim import serial_device, CreateSimulation
 
 # create a class that represents the device
 class OxInstCryojet(serial_device):
@@ -76,10 +76,15 @@ class OxInstCryojet(serial_device):
 			serial_device.command(self, text)
 			
 
-if __name__ == "__main__":
-	# little test function that runs only when you run this file
-	dev = OxInstCryojet()
-	dev.start_ip(9004)
-	dev.start_debug(9006)
-	# do a raw_input() to stop the program exiting immediately
-	raw_input()
+##if __name__ == "__main__":
+##	# little test function that runs only when you run this file
+##	dev = OxInstCryojet()
+##	dev.start_ip(9004)
+##	dev.start_debug(9006)
+##	# do a raw_input() to stop the program exiting immediately
+##	raw_input()
+
+if __name__=="__main__": 
+	CreateSimulation(OxInstCryojet) 
+	raw_input() 
+	

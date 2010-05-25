@@ -45,7 +45,7 @@ example_sim_DBD += base.dbd
 example_sim_DBD += stream.dbd
 example_sim_DBD += drvAsynSerialPort.dbd
 example_sim_DBD += drvAsynIPPort.dbd
-example_sim_DBD += PythonEmbed.dbd
+##example_sim_DBD += PythonEmbed.dbd
 
 # example_registerRecordDeviceDriver.cpp will be created
 # example.dbd
@@ -72,7 +72,7 @@ example_LIBS += stream
 
 example_sim_LIBS += asyn
 example_sim_LIBS += stream
-example_sim_LIBS += PythonEmbed
+##example_sim_LIBS += PythonEmbed
 
 # We need to link this IOC Application against the EPICS Base libraries
 example_LIBS += $(EPICS_BASE_IOC_LIBS)

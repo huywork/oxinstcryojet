@@ -1,4 +1,4 @@
-#!/bin/env python2.4
+#!/bin/env dls-python2.4
 
 # Test suite to use with pyUnit
 
@@ -19,7 +19,8 @@ class CryojetTestSuite(TestSuite):
             epicsDbFiles="db/example.db",
             simDevices=[SimDevice("controller1", 9006)],
             environment=[('EPICS_CA_REPEATER_PORT','6065'), ('EPICS_CA_SERVER_PORT','6064')],
-            guiCmds=['edm -x -eolc -m "P=TS-EA-CJET-01,Q=\'\'" data/cryojet.edl'])
+            guiCmds=['edm -x -eolc -m "P=TS-EA-CJET-01,Q=\'\'" data/cryojet.edl'],
+            simulationCmds=['data/OxInstCryojet_sim.py -i 9005 -d 9006'])
         Target("hardware", self,
             iocDirectory="example",
             iocBootCmd="bin/linux-x86/stexample.boot",

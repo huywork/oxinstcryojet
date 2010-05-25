@@ -1,0 +1,5 @@
+#!/bin/env bash
+
+cd "$(INSTALL)"
+
+../data/OxInstCryojet_sim.py -i 9005 -d 9006

@@ -15,7 +15,7 @@ DBD += OxInstCryojet.dbd
 OxInstCryojet_DBD += base.dbd
 OxInstCryojet_DBD += stream.dbd
 OxInstCryojet_DBD += asynRecord.dbd
-OxInstCryojet_DBD += calc.dbd
+OxInstCryojet_DBD += calcSupport.dbd
 
 
 OxInstCryojet_LIBS += stream
