@@ -12,6 +12,7 @@ include $(TOP)/configure/CONFIG
 # templates like this
 #
 DB += cryojet.template
+DB += cryojetITC503S.template
 DB += ILM201.template
 
 #----------------------------------------------------
