@@ -10,9 +10,9 @@
 #
 
 terminator   = CR;
-replytimeout = 1000;
-readtimeout  = 100;
-locktimeout = 10000;
+replytimeout = 5000;
+readtimeout  = 500;
+locktimeout = 20000;
 extrainput   = Ignore;
 separator = "";
 

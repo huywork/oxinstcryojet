@@ -214,7 +214,7 @@ record(ai, "$(P)$(Q):STEMP3") {
   field(PREC, "3")
   field(HOPR, "999.99")
   field(LOPR, "0")
-  field(EGU, "K")
+  field(EGU, "mBar")
 }
 
 record(ai, "$(P)$(Q):TEMP:ERR") {
@@ -337,32 +337,37 @@ record(asyn, "$(P)$(Q):ASYN") {
   field(PORT, "$(PORT)")
 }
 
-record(fanout, "$(P)$(Q):FAN2") {
-  field(FLNK, "$(P)$(Q):FAN3")
-  field(LNK1, "$(P)$(Q):HEATERP")
-  field(LNK2, "$(P)$(Q):GASFLOW")
-  field(LNK3, "$(P)$(Q):HEATERV")
-  field(LNK4, "$(P)$(Q):ACTIVITY")
-  field(LNK5, "$(P)$(Q):CTRL")
-}
-
-record(fanout, "$(P)$(Q):FAN3") {
-  field(LNK1, "$(P)$(Q):CHANFREQ")
-  field(LNK2, "$(P)$(Q):STEMP")
-  field(LNK3, "$(P)$(Q):STEMP2")	
-  field(LNK4, "$(P)$(Q):STEMP3")
-  field(LNK5, "$(P)$(Q):TEMP:ERR")
-}
 
 record(fanout, "$(P)$(Q):FAN1") {
   field(SCAN, "2 second")
   field(SDIS, "$(P)$(Q):DISABLE")
-  field(FLNK, "$(P)$(Q):FAN2")
+  field(SELM, "All")
+  field(LNK1, "$(P)$(Q):STEMP")
+  field(LNK2, "$(P)$(Q):STEMP2")
+  field(LNK3, "$(P)$(Q):STEMP3")
+  field(LNK4, "$(P)$(Q):TTEMP")
+  field(LNK5, "$(P)$(Q):TEMP:ERR")
+}
+
+record(fanout, "$(P)$(Q):FAN2") {
+  field(SCAN, "5 second")
+  field(SDIS, "$(P)$(Q):DISABLE")
+  field(FLNK, "$(P)$(Q):FAN3")
   field(SELM, "All")
   field(LNK1, "$(P)$(Q):P")
   field(LNK2, "$(P)$(Q):I")
   field(LNK3, "$(P)$(Q):D")
-  field(LNK4, "$(P)$(Q):TTEMP")
+  field(LNK4, "$(P)$(Q):GFLOW")
+  field(LNK5, "$(P)$(Q):HEATERV")
+  field(LNK6, "$(P)$(Q):HEATERP")
+}
+
+record(fanout, "$(P)$(Q):FAN3") {
+  field(SELM, "All")
+  field(FLNK, "$(P)$(Q):FAN4")
+  field(LNK1, "$(P)$(Q):ACTIVITY")
+  field(LNK2, "$(P)$(Q):CHANFREQ")
+  field(LNK3, "$(P)$(Q):CTRL")
 }
 
 #! Further lines contain data used by VisualDCT
