@@ -18,7 +18,7 @@
 #    returns an error response, the previous good response will be used
 #    instead. This will be done 3 times. After the 3rd time, the level will be
 #    reported as -1% indicating an error.
-# %gdatag,template,simplePv,$(gda_name),$(gda_desc)
+# %gdatag,template,simplePv,$(gda_name=),$(gda_desc=)
 record(asyn, "$(P):RAWLEVEL") {
   field(PORT, "$(PORT)")
   field(AOUT, "R1")
@@ -52,7 +52,7 @@ record(scalcout, "$(P):RAWLEVELBUF") {
 }
 
 # %archiver 10 Monitor
-# %gdatag,pv,ro,$(gda_name),RECORD,Fill level
+# %gdatag,pv,ro,$(gda_name=),RECORD,Fill level
 record(scalcout, "$(P):LEVEL") {
   field(SCAN, "10 second")
   field(INAA, "$(P):RAWLEVELBUF.SVAL PP MS")

@@ -4,8 +4,8 @@
 #! DBDEND
 
 
-#% gdatag,template,OxInstCryojet,$(gda_name),$(gda_desc)
-#% gdatag,pv,rw,$(gda_name),PGAIN_SET
+#% gdatag,template,OxInstCryojet,$(gda_name=),$(gda_desc=)
+#% gdatag,pv,rw,$(gda_name=),PGAIN_SET
 #% autosave 1 VAL
 record(ao, "$(P)$(Q):P:SET") {
   field(DESC, "Set PID P")
@@ -18,7 +18,7 @@ record(ao, "$(P)$(Q):P:SET") {
   field(DRVL, "0")
 }
 
-#% gdatag,pv,rw,$(gda_name),IGAIN_SET
+#% gdatag,pv,rw,$(gda_name=),IGAIN_SET
 #% autosave 1 VAL
 record(ao, "$(P)$(Q):I:SET") {
   field(DESC, "Set PID I")
@@ -31,7 +31,7 @@ record(ao, "$(P)$(Q):I:SET") {
   field(DRVL, "0")
 }
 
-#% gdatag,pv,rw,$(gda_name),DGAIN_SET
+#% gdatag,pv,rw,$(gda_name=),DGAIN_SET
 #% autosave 1 VAL
 record(ao, "$(P)$(Q):D:SET") {
   field(DESC, "Set PID D")
@@ -56,7 +56,7 @@ record(ao, "$(P)$(Q):MAXV:SET") {
   field(DRVL, "0")
 }
 
-#% gdatag,pv,rw,$(gda_name),SHIELDFLOW_SET
+#% gdatag,pv,rw,$(gda_name=),SHIELDFLOW_SET
 #% autosave 1 VAL
 record(ao, "$(P)$(Q):SHIELDFLW:SET") {
   field(DESC, "Set shield flow")
@@ -69,7 +69,7 @@ record(ao, "$(P)$(Q):SHIELDFLW:SET") {
   field(DRVL, "0")
 }
 
-#% gdatag,pv,rw,$(gda_name),SAMPLEFLOW_SET
+#% gdatag,pv,rw,$(gda_name=),SAMPLEFLOW_SET
 #% autosave 1 VAL
 record(ao, "$(P)$(Q):SAMPLEFLW:SET") {
   field(DESC, "Set sample flow")
@@ -104,7 +104,7 @@ record(bo, "$(P)$(Q):ACTIVITY:SET") {
   field(ONAM, "Auto")
 }
 
-#% gdatag,pv,rw,$(gda_name),TEMP_SET
+#% gdatag,pv,rw,$(gda_name=),TEMP_SET
 #% autosave 1 VAL
 record(ao, "$(P)$(Q):TTEMP:SET") {
   field(DESC, "Set target temp")
@@ -168,7 +168,7 @@ record(ai, "$(P)$(Q):TTEMP") {
   field(EGU, "K")
 }
 
-#% gdatag,pv,ro,$(gda_name),SENSOR_TEMP
+#% gdatag,pv,ro,$(gda_name=),SENSOR_TEMP
 #% archiver 10 Monitor
 record(ai, "$(P)$(Q):STEMP") {
   field(DESC, "Get sensor temp")
@@ -276,7 +276,7 @@ record(ai, "$(P)$(Q):CHANFREQ") {
   field(EGU, "Hz")
 }
 
-# % gdatag,binary,rw,$(gda_name),DISABLE
+# % gdatag,binary,rw,$(gda_name=),DISABLE
 record(bo, "$(P)$(Q):DISABLE") {
   field(DESC, "Disable comms")
   field(PINI, "YES")
