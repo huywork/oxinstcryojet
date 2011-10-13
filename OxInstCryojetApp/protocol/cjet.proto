@@ -4,9 +4,8 @@
 #
 #######################################################################
 #
-# Stream Device Protocol for Stanford SR570 Low Noise Current Amp
+# Stream Device Protocol for Oxford Instruments ITC503 Intelligent Temperature Controller
 #
-# 19200 baud, DCE, 8 bit, 1 stop bits, no parity bit, no handshake
 #
 
 terminator   = CR;
