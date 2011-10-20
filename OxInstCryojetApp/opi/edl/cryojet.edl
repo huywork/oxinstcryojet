@@ -474,7 +474,7 @@ x 180
 y 260
 w 70
 h 20
-controlPv "$(P)$(Q):SHIELDFLW"
+controlPv "$(P)$(Q):SAMPLEFLW"
 font "arial-bold-r-14.0"
 fgColor index 16
 fgAlarm
@@ -504,7 +504,7 @@ fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Shield"
+  "Sample"
 }
 endObjectProperties
 
@@ -518,7 +518,7 @@ x 250
 y 260
 w 70
 h 20
-controlPv "$(P)$(Q):SHIELDFLW:SET"
+controlPv "$(P)$(Q):SAMPLEFLW:SET"
 font "arial-bold-r-14.0"
 fontAlign "center"
 fgColor index 25
@@ -544,7 +544,7 @@ x 180
 y 280
 w 70
 h 20
-controlPv "$(P)$(Q):SAMPLEFLW"
+controlPv "$(P)$(Q):SHIELDFLW"
 font "arial-bold-r-14.0"
 fgColor index 16
 fgAlarm
@@ -574,7 +574,7 @@ fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Sample"
+  "Shield"
 }
 endObjectProperties
 
@@ -588,7 +588,7 @@ x 250
 y 280
 w 70
 h 20
-controlPv "$(P)$(Q):SAMPLEFLW:SET"
+controlPv "$(P)$(Q):SHIELDFLW:SET"
 font "arial-bold-r-14.0"
 fontAlign "center"
 fgColor index 25
