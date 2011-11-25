@@ -1,0 +1,188 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 1108
+y 651
+w 320
+h 140
+font "arial-medium-r-18.0"
+ctlFont "arial-medium-r-18.0"
+btnFont "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+title "Series 700 - $(CS)"
+showGrid
+snapToGrid
+gridSize 5
+disableScroll
+endScreenProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 120
+y 35
+w 190
+h 25
+controlPv "$(CS):LEVEL"
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 0
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Menu Mux)
+object menuMuxClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 2000
+y 240
+w 150
+h 45
+fgColor index 14
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(CS):CSTYPE"
+font "arial-medium-r-18.0"
+numItems 2
+symbolTag {
+  0 "Cryostream"
+  1 "Phenix"
+}
+symbol0 {
+  0 "purge"
+  1 "purge"
+}
+value0 {
+  0 "Purge"
+  1 "Warm"
+}
+symbol1 {
+  0 "gas"
+  1 "gas"
+}
+value1 {
+  0 "Gas"
+  1 "Sample"
+}
+symbol2 {
+  0 "evap"
+  1 "evap"
+}
+value2 {
+  0 "Evap"
+  1 "Shield"
+}
+symbol3 {
+  0 "gasflow"
+  1 "gasflow"
+}
+value3 {
+  0 "Gas Flow"
+  1 "Cryo Speed"
+}
+symbol4 {
+  0 "evapadjust"
+  1 "evapadjust"
+}
+value4 {
+  0 "Evap Adjust"
+  1 "Evap Adjust"
+}
+symbol5 {
+  0 "cstype"
+  1 "cstype"
+}
+value5 {
+  0 "Oxford Cryostream"
+  1 "Phenix Cryostat"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 5
+y 35
+w 100
+h 25
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Cryo fill level:"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 5
+y 5
+w 310
+h 24
+font "arial-bold-r-16.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "$(CS)"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 85
+y 80
+w 100
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 14
+font "arial-medium-r-18.0"
+buttonLabel "More"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "OXILM.edl"
+}
+symbols {
+  0 "CS=$(CS)"
+}
+endObjectProperties
+
