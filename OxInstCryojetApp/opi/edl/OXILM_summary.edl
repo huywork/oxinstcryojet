@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1108
-y 651
+x 927
+y 422
 w 320
-h 140
+h 100
 font "arial-medium-r-18.0"
 ctlFont "arial-medium-r-18.0"
 btnFont "arial-medium-r-18.0"
@@ -33,7 +33,7 @@ major 4
 minor 5
 release 0
 x 120
-y 35
+y 30
 w 190
 h 25
 controlPv "$(CS):LEVEL"
@@ -129,7 +129,7 @@ major 4
 minor 1
 release 0
 x 5
-y 35
+y 30
 w 100
 h 25
 font "arial-bold-r-14.0"
@@ -150,7 +150,7 @@ release 0
 x 5
 y 5
 w 310
-h 24
+h 20
 font "arial-bold-r-16.0"
 fgColor index 14
 bgColor index 3
@@ -166,15 +166,15 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 85
-y 80
-w 100
+x 230
+y 65
+w 80
 h 25
 fgColor index 43
 bgColor index 3
 topShadowColor index 0
 botShadowColor index 14
-font "arial-medium-r-18.0"
+font "arial-bold-r-14.0"
 buttonLabel "More"
 numPvs 4
 numDsps 1
