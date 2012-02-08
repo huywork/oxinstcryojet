@@ -265,6 +265,9 @@ botShadowColor index 11
 font "arial-bold-r-14.0"
 buttonLabel "More"
 numPvs 4
-numDsps 0
+numDsps 1
+displayFileName {
+  0 "cryojetITC503S.edl"
+}
 endObjectProperties
 
