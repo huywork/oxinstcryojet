@@ -12,7 +12,15 @@
 #  Parameters:
 #    $(P)     PV name prefix
 #    $(PORT)  asyn name for serial port connected to device
+#    $(DISABLED) Optional macro for whether device is polled or not.
+#		These instruments tend to be used on beamline end stations, which might
+#		not always be connected and can generate many IOC errors trying to poll
+#		an absent device. Defaults to 1.
+#			1  Disabled (use if device known to might be disconnected).
+#			0  Enabled (use if device known to be always connected).
 #
+#    $(LVLDESC) Optional macro for the label string for the level.  Used in EDM screens.
+#		Defaults to "Cryo fill level".
 #  User notes:
 #    This driver buffers the level responses from the device. If the device
 #    returns an error response, the previous good response will be used
@@ -53,7 +61,9 @@ record(scalcout, "$(P):RAWLEVELBUF") {
 
 # %archiver 10 Monitor
 # %gdatag,pv,ro,$(gda_name=),RECORD,Fill level
+#% alh
 record(scalcout, "$(P):LEVEL") {
+  field(DESC, "Convert raw to level") 
   field(SCAN, "10 second")
   field(INAA, "$(P):RAWLEVELBUF.SVAL PP MS")
   field(CALC, "DBL(SSCANF(AA,'R%f'))/10")
@@ -79,6 +89,12 @@ record(bo, "$(P):DISABLE") {
   field(OMSL, "supervisory")
   field(ZNAM, "Enabled")
   field(ONAM, "Disabled")
+}
+
+record(stringout, "$(P):LEVEL:DESC") {
+  field(DESC, "Level description for screen.")
+  field(VAL, "$(LVLDESC=Cryo fill level)")
+  field(PINI, "YES")
 }
 
 #! Further lines contain data used by VisualDCT
