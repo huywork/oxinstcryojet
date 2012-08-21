@@ -61,7 +61,7 @@ record(scalcout, "$(P):RAWLEVELBUF") {
 
 # %archiver 10 Monitor
 # %gdatag,pv,ro,$(gda_name=),RECORD,Fill level
-#% alh
+#% alh $SEVRCOMMAND UP_ANY /dls_sw/prod/tools/RHEL5/bin/dls-sendsms-alarm.py $(P):LEVEL
 record(scalcout, "$(P):LEVEL") {
   field(DESC, "Convert raw to level") 
   field(SCAN, "10 second")
