@@ -14,6 +14,7 @@ include $(TOP)/configure/CONFIG
 DB += cryojet.template
 DB += cryojetITC503S.template
 DB += ILM201.template
+DB += ITC4.template
 
 #----------------------------------------------------
 # In a Diamond IOC Application, build db files from
