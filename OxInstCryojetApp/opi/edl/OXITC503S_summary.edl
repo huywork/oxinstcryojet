@@ -19,7 +19,7 @@ ctlBgColor1 index 3
 ctlBgColor2 index 3
 topShadowColor index 1
 botShadowColor index 11
-title "Oxford Instruments ITC503 - $(P)$(Q)"
+title "Oxford Instruments ITC503S - $(P)$(Q)"
 showGrid
 snapToGrid
 gridSize 5
@@ -51,7 +51,7 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 75
+x 90
 y 30
 w 70
 h 20
@@ -67,7 +67,6 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -112,7 +111,6 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Control)
@@ -138,26 +136,6 @@ useKp
 useHexPrefix
 newPos
 objType "controls"
-noExecuteClipMask
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 5
-y 30
-w 70
-h 20
-font "arial-bold-r-14.0"
-fgColor index 14
-bgColor index 3
-useDisplayBg
-value {
-  "Temp 1"
-}
 endObjectProperties
 
 # (Text Monitor)
@@ -166,7 +144,7 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 75
+x 90
 y 50
 w 70
 h 20
@@ -182,7 +160,6 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
@@ -191,7 +168,7 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 75
+x 90
 y 70
 w 70
 h 20
@@ -207,45 +184,6 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
-noExecuteClipMask
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 5
-y 50
-w 70
-h 20
-font "arial-bold-r-14.0"
-fgColor index 14
-bgColor index 3
-useDisplayBg
-value {
-  "Temp 2"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 5
-y 70
-w 70
-h 20
-font "arial-bold-r-14.0"
-fgColor index 14
-bgColor index 3
-useDisplayBg
-value {
-  "Temp 3"
-}
 endObjectProperties
 
 # (Related Display)
@@ -269,5 +207,71 @@ numDsps 1
 displayFileName {
   0 "cryojetITC503S.edl"
 }
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 5
+y 70
+w 85
+h 20
+controlPv "$(P)$(Q):STEMP3:DESC"
+font "arial-bold-r-14.0"
+fgColor index 14
+fgAlarm
+bgColor index 3
+useDisplayBg
+nullColor index 14
+fastUpdate
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 5
+y 50
+w 85
+h 20
+controlPv "$(P)$(Q):STEMP2:DESC"
+font "arial-bold-r-14.0"
+fgColor index 14
+fgAlarm
+bgColor index 3
+useDisplayBg
+nullColor index 14
+fastUpdate
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 5
+y 30
+w 85
+h 20
+controlPv "$(P)$(Q):STEMP:DESC"
+font "arial-bold-r-14.0"
+fgColor index 14
+fgAlarm
+bgColor index 3
+useDisplayBg
+nullColor index 14
+fastUpdate
+newPos
+objType "monitors"
 endObjectProperties
 
