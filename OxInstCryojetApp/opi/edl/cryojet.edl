@@ -64,16 +64,17 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 110
+x 150
 y 10
-w 154
+w 60
 h 20
 font "arial-bold-r-18.0"
+fontAlign "center"
 fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "$(P)$(Q) - Cryojet"
+  "$(STR)"
 }
 autoSize
 endObjectProperties
@@ -82,7 +83,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 180
 y 80
@@ -189,7 +190,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 180
 y 120
@@ -233,7 +234,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 180
 y 100
@@ -258,7 +259,7 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 250
 y 100
@@ -284,7 +285,7 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 250
 y 170
@@ -310,7 +311,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 180
 y 170
@@ -354,7 +355,7 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 250
 y 190
@@ -380,7 +381,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 180
 y 190
@@ -424,7 +425,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 180
 y 210
@@ -468,7 +469,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 180
 y 260
@@ -512,7 +513,7 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 250
 y 260
@@ -538,7 +539,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 180
 y 280
@@ -582,7 +583,7 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 250
 y 280
@@ -627,7 +628,7 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 310
 y 330
@@ -653,7 +654,7 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 250
 y 390
@@ -737,7 +738,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 120
 y 330
@@ -781,7 +782,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 120
 y 350
@@ -825,7 +826,7 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 250
 y 210
@@ -851,7 +852,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 120
 y 370
@@ -876,7 +877,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 120
 y 450
@@ -920,7 +921,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 4
+minor 5
 release 0
 x 160
 y 420

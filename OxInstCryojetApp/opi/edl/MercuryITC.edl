@@ -1,0 +1,195 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 546
+y 84
+w 232
+h 320
+font "arial-bold-r-14.0"
+ctlFont "arial-bold-r-14.0"
+btnFont "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 14
+ctlBgColor1 index 3
+ctlBgColor2 index 3
+topShadowColor index 1
+botShadowColor index 11
+title "Cryojet"
+showGrid
+snapToGrid
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 240
+h 40
+lineColor index 61
+fill
+fillColor index 61
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 70
+y 270
+w 90
+h 30
+fgColor index 46
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+label "EXIT"
+font "arial-medium-r-18.0"
+3d
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 90
+y 10
+w 60
+h 20
+font "arial-bold-r-18.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "$(STR)"
+}
+autoSize
+endObjectProperties
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 30
+y 220
+w 170
+h 30
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-14.0"
+buttonLabel "Asyn"
+numCmds 1
+command {
+  0 "cd /dls_sw/prod/R3.14.8.2/support/asyn/4-9/medm;  medm -x -macro \"P=$(P)$(Q):,R=ASYN\" asynRecord.adl"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 30
+y 60
+w 170
+h 30
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-14.0"
+buttonLabel "System Commands"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "MercuryITC-system.edl"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 30
+y 100
+w 170
+h 30
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-14.0"
+buttonLabel "Temperature Sensor"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "MercuryITC-tempSensor.edl"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 30
+y 140
+w 170
+h 30
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-14.0"
+buttonLabel "Heater Controller"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "MercuryITC-heater.edl"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 30
+y 180
+w 170
+h 30
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-14.0"
+buttonLabel "Control Loop"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "MercuryITC-loop.edl"
+}
+endObjectProperties
+

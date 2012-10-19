@@ -1,0 +1,939 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 604
+y 241
+w 770
+h 563
+font "arial-bold-r-14.0"
+ctlFont "arial-bold-r-14.0"
+btnFont "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 14
+ctlBgColor1 index 3
+ctlBgColor2 index 3
+topShadowColor index 1
+botShadowColor index 11
+title "Cryojet"
+showGrid
+snapToGrid
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 780
+h 40
+lineColor index 61
+fill
+fillColor index 61
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 630
+y 490
+w 90
+h 30
+fgColor index 46
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+label "EXIT"
+font "arial-medium-r-18.0"
+3d
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 200
+y 10
+w 407
+h 20
+font "arial-bold-r-18.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Oxford Mercury ITC Control Loop Commands"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 280
+y 130
+w 350
+h 20
+controlPv "$(P)$(Q):READ_TEMP_LOOP_AUX"
+font "arial-bold-r-14.0"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 20
+y 100
+w 210
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Heater associated with loop:"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 20
+y 130
+w 240
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Aux. board associated with loop:"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 20
+y 160
+w 250
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Level meter associated with loop:"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 20
+y 250
+w 160
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Temperature setpoint:"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 20
+y 280
+w 200
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "PID auto (use PID table):"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 20
+y 310
+w 160
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "P gain:"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 20
+y 340
+w 140
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "I gain:"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 20
+y 400
+w 210
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Filename of sweep file:"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 20
+y 450
+w 150
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Sweep mode:"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 280
+y 160
+w 350
+h 20
+controlPv "$(P)$(Q):READ_TEMP_LOOP_LVL"
+font "arial-bold-r-14.0"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 280
+y 190
+w 350
+h 20
+controlPv "$(P)$(Q):READ_TEMP_LOOP_ENAB"
+font "arial-bold-r-14.0"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 280
+y 220
+w 350
+h 20
+controlPv "$(P)$(Q):READ_TEMP_LOOP_HSET"
+font "arial-bold-r-14.0"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 280
+y 250
+w 350
+h 20
+controlPv "$(P)$(Q):READ_TEMP_LOOP_TSET"
+font "arial-bold-r-14.0"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 280
+y 280
+w 350
+h 20
+controlPv "$(P)$(Q):READ_TEMP_LOOP_PIDT"
+font "arial-bold-r-14.0"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 280
+y 310
+w 350
+h 20
+controlPv "$(P)$(Q):READ_TEMP_LOOP_P"
+font "arial-bold-r-14.0"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 280
+y 340
+w 350
+h 20
+controlPv "$(P)$(Q):READ_TEMP_LOOP_I"
+font "arial-bold-r-14.0"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 280
+y 100
+w 350
+h 20
+controlPv "$(P)$(Q):READ_TEMP_LOOP_HTR"
+font "arial-bold-r-14.0"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 640
+y 190
+w 80
+h 20
+fgColor index 25
+bgColor index 3
+inconsistentColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(P)$(Q):SET_TEMP_LOOP_ENAB"
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 640
+y 280
+w 80
+h 20
+fgColor index 25
+bgColor index 3
+inconsistentColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(P)$(Q):SET_TEMP_LOOP_PIDT"
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 640
+y 100
+w 110
+h 20
+controlPv "$(P)$(Q):SET_TEMP_LOOP_HTR"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+limitsFromDb
+nullColor index 14
+useKp
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 640
+y 130
+w 110
+h 20
+controlPv "$(P)$(Q):SET_TEMP_LOOP_AUX"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+limitsFromDb
+nullColor index 14
+useKp
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 20
+y 190
+w 250
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Loop enabled (heater auto on/off):"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 20
+y 220
+w 190
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Percentage heater output:"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 280
+y 450
+w 350
+h 20
+controlPv "$(P)$(Q):READ_TEMP_LOOP_SWMD"
+font "arial-bold-r-14.0"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 280
+y 400
+w 350
+h 20
+controlPv "$(P)$(Q):READ_TEMP_LOOP_SWFL"
+font "arial-bold-r-14.0"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 20
+y 370
+w 140
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "D gain:"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 280
+y 370
+w 350
+h 20
+controlPv "$(P)$(Q):READ_TEMP_LOOP_D"
+font "arial-bold-r-14.0"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 640
+y 160
+w 110
+h 20
+controlPv "$(P)$(Q):SET_TEMP_LOOP_LVL"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+limitsFromDb
+nullColor index 14
+useKp
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 640
+y 220
+w 110
+h 20
+controlPv "$(P)$(Q):SET_TEMP_LOOP_HSET"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+limitsFromDb
+nullColor index 14
+useKp
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 640
+y 250
+w 110
+h 20
+controlPv "$(P)$(Q):SET_TEMP_LOOP_TSET"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+limitsFromDb
+nullColor index 14
+useKp
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 640
+y 450
+w 80
+h 20
+fgColor index 25
+bgColor index 3
+inconsistentColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(P)$(Q):SET_TEMP_LOOP_SWMD"
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 390
+y 50
+w 80
+h 30
+font "arial-bold-r-20.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "READ"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 660
+y 50
+w 80
+h 30
+font "arial-bold-r-20.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "SET"
+}
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 640
+y 310
+w 110
+h 20
+controlPv "$(P)$(Q):SET_TEMP_LOOP_P"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+limitsFromDb
+nullColor index 14
+useKp
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 640
+y 340
+w 110
+h 20
+controlPv "$(P)$(Q):SET_TEMP_LOOP_I"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+limitsFromDb
+nullColor index 14
+useKp
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 640
+y 370
+w 110
+h 20
+controlPv "$(P)$(Q):SET_TEMP_LOOP_D"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+limitsFromDb
+nullColor index 14
+useKp
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 640
+y 400
+w 110
+h 20
+controlPv "$(P)$(Q):SET_TEMP_LOOP_SWFL"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+limitsFromDb
+nullColor index 14
+useKp
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 20
+y 420
+w 370
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "(/opt/OxfordInstruments/cryosys/sweep_tables/)"
+}
+endObjectProperties
+
