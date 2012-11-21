@@ -3,10 +3,19 @@
 #! DBD("../../dbd/OxInstCryojet.dbd")
 #! DBDEND
 
-
-#% gdatag,template,OxInstCryojet,$(gda_name=),$(gda_desc=)
-#% gdatag,pv,rw,$(gda_name=),PGAIN_SET
-#% autosave 1 VAL
+# % macro, P,     PV name prefix
+# % macro, Q,     PV name suffix
+# % macro, PORT,  asyn name for serial port connected to device
+# % macro, DISABLED, Optional macro for whether device is polled or not.
+# % macro, name, object and gui association name
+# % macro, STR, Gui titlebar label
+# % macro, gda_name, gda name
+# % macro, gda_desc, gda description
+# % gdatag,template,OxInstCryojet,$(gda_name=),$(gda_desc=)
+# % gdatag,pv,rw,$(gda_name=),PGAIN_SET
+# % gui, $(name=), edmembed, cryojet_embed.edl, P=$(P),Q=$(Q),STR=$(STR=$(name=))
+# % gui, $(name=), edm, cryojet.edl, P=$(P),Q=$(Q),STR=$(STR=$(name=))
+# % autosave 1 VAL
 record(ao, "$(P)$(Q):P:SET") {
   field(DESC, "Set PID P")
   field(SCAN, "Passive")
@@ -290,28 +299,43 @@ record(asyn, "$(P)$(Q):ASYN") {
   field(PORT, "$(PORT)")
 }
 
-record(fanout, "$(P)$(Q):FAN2") {
-  field(FLNK, "$(P)$(Q):CHANFREQ")
-  field(LNK1, "$(P)$(Q):HEATERP")
-  field(LNK2, "$(P)$(Q):SHIELDFLW")
-  field(LNK3, "$(P)$(Q):SAMPLEFLW")
-  field(LNK4, "$(P)$(Q):HEATERV")
-  field(LNK5, "$(P)$(Q):ACTIVITY")
-  field(LNK6, "$(P)$(Q):CTRL")
+record(seq, "$(P)$(Q):FAN1") {
+  field(SCAN, "10 second")
+  field(SDIS, "$(P)$(Q):DISABLE")
+  field(SELM, "All")
+  field(LNK1, "$(P)$(Q):P.PROC PP")
+  field(LNK2, "$(P)$(Q):I.PROC PP")
+  field(LNK3, "$(P)$(Q):D.PROC PP")
+  field(LNK4, "$(P)$(Q):TTEMP.PROC PP")
+  field(LNK5, "$(P)$(Q):STEMP.PROC PP")
+  field(LNK6, "$(P)$(Q):TEMP:ERR.PROC PP")
+  field(LNK7, "$(P)$(Q):FAN2.PROC PP")
+  field(LNK8, "$(P)$(Q):FAN1.DESC")      
+  field(DLY2, "1.0")
+  field(DLY3, "1.0")
+  field(DLY4, "1.0")
+  field(DLY5, "1.0")
+  field(DLY6, "1.0")   
+  field(DLY7, "1.0")   
+  field(DLY8, "6.0")     
 }
 
-record(fanout, "$(P)$(Q):FAN1") {
-  field(SCAN, "2 second")
-  field(SDIS, "$(P)$(Q):DISABLE")
-  field(FLNK, "$(P)$(Q):FAN2")
+record(seq, "$(P)$(Q):FAN2") {
   field(SELM, "All")
-  field(LNK1, "$(P)$(Q):P")
-  field(LNK2, "$(P)$(Q):I")
-  field(LNK3, "$(P)$(Q):D")
-  field(LNK4, "$(P)$(Q):TTEMP")
-  field(LNK5, "$(P)$(Q):STEMP")
-  field(LNK6, "$(P)$(Q):TEMP:ERR")
+  field(LNK1, "$(P)$(Q):HEATERP.PROC PP")
+  field(LNK2, "$(P)$(Q):SHIELDFLW.PROC PP")
+  field(LNK3, "$(P)$(Q):SAMPLEFLW.PROC PP")
+  field(LNK4, "$(P)$(Q):HEATERV.PROC PP")
+  field(LNK5, "$(P)$(Q):ACTIVITY.PROC PP")
+  field(LNK6, "$(P)$(Q):CHANFREQ.PROC PP")  
+  field(DLY2, "1.0")
+  field(DLY3, "1.0")
+  field(DLY4, "1.0")
+  field(DLY5, "1.0")
+  field(DLY6, "1.0")
 }
+
+
 
 #! Further lines contain data used by VisualDCT
 #! View(3193,3250,0.8)

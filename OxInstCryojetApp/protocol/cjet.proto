@@ -4,12 +4,12 @@
 #
 #######################################################################
 #
-# Stream Device Protocol for Oxford Instruments ITC503 Intelligent Temperature Controller
+# Stream Device Protocol for Oxford instruments ITC503 intelligent Temperature Controller
 #
 #
 
 terminator   = CR;
-replytimeout = 5000;
+replytimeout = 4000;
 readtimeout  = 500;
 locktimeout = 20000;
 extrainput   = Ignore;
@@ -21,7 +21,7 @@ separator = "";
 
 #Monitor commands
 
-set_ctrl{out"%{C0|C1|C2|C3}"}
+set_ctrl{out"%{C0|C1|C2|C3}"; in "C"}
 
 get_param{out"R%2u"; in"R%f"}
 get_ttemp{out"R0"; in"R%f"}
@@ -44,7 +44,7 @@ get_sta{out"X"; in "X0%{A0|A1}%(\$1.VAL){C0|C1|C2|C3}"}
 
 #Control comamnds
 
-set_act{out"%{A0|A1}"}
+set_act{out"%{A0|A1}"; in "A"}
 set_d{out"D%.1f"; in"D"}
 set_i{out"I%.1f"; in"I"}
 set_sh_flo{out"J%.1f"; in"J"}

@@ -10,23 +10,28 @@
 #  Part description: Single liquid nitrogen level meter and probe
 #
 #  Parameters:
-#    $(P)     PV name prefix
-#    $(PORT)  asyn name for serial port connected to device
-#    $(DISABLED) Optional macro for whether device is polled or not.
+# % macro, P,     PV name prefix
+# % macro, PORT,  asyn name for serial port connected to device
+# % macro, DISABLED, Optional macro for whether device is polled or not.
 #		These instruments tend to be used on beamline end stations, which might
 #		not always be connected and can generate many IOC errors trying to poll
 #		an absent device. Defaults to 1.
 #			1  Disabled (use if device known to might be disconnected).
 #			0  Enabled (use if device known to be always connected).
-#
-#    $(LVLDESC) Optional macro for the label string for the level.  Used in EDM screens.
+# % macro, LVLDESC, Optional macro for the label string for the level.  Used in EDM screens.
 #		Defaults to "Cryo fill level".
+# % macro, name, object and gui association name
+# % macro, gda_name, gda name
+# % macro, gda_desc, gda description
+#
 #  User notes:
 #    This driver buffers the level responses from the device. If the device
 #    returns an error response, the previous good response will be used
 #    instead. This will be done 3 times. After the 3rd time, the level will be
 #    reported as -1% indicating an error.
 # %gdatag,template,simplePv,$(gda_name=),$(gda_desc=)
+# % gui, $(name=), edmembed, OXILM_embed.edl, CS=$(P)
+# % gui, $(name=), edm, OXILM.edl, CS=$(P)
 record(asyn, "$(P):RAWLEVEL") {
   field(PORT, "$(PORT)")
   field(AOUT, "R1")

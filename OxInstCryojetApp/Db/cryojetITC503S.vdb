@@ -3,10 +3,15 @@
 #! DBD("../../dbd/OxInstCryojet.dbd")
 #! DBDEND
 
-
-#% gdatag,template,OxInstCryojet,$(gda_name=),$(gda_desc=)
-#% gdatag,pv,rw,$(gda_name=),PGAIN_SET
-#% autosave 1 VAL
+# % macro, P,     PV name prefix
+# % macro, Q,     PV name suffix
+# % macro, PORT,  asyn name for serial port connected to device
+# % macro, DISABLED, Optional macro for whether device is polled or not.
+# % macro, gda_name, gda name
+# % macro, gda_desc, gda description
+# % gdatag,template,OxInstCryojet,$(gda_name=),$(gda_desc=)
+# % gdatag,pv,rw,$(gda_name=),PGAIN_SET
+# % autosave 1 VAL
 record(ao, "$(P)$(Q):P:SET") {
   field(DESC, "Set PID P")
   field(SCAN, "Passive")
