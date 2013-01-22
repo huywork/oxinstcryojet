@@ -20,6 +20,10 @@
 #			0  Enabled (use if device known to be always connected).
 # % macro, LVLDESC, Optional macro for the label string for the level.  Used in EDM screens.
 #		Defaults to "Cryo fill level".
+# % macro, HIHI_LIMIT, Optional macro for HIHI value for LEVEL record. Defaults to 90
+# % macro, HIGH_LIMIT, Optional macro for HIGH value for LEVEL record. Defaults to 81
+# % macro, LOW_LIMIT, Optional macro for LOW value for LEVEL record. Defaults to 39
+# % macro, LOLO_LIMIT, Optional macro for LOLO value for LEVEL record. Defaults to 20.5
 # % macro, name, object and gui association name
 # % macro, gda_name, gda name
 # % macro, gda_desc, gda description
