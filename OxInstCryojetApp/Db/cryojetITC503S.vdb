@@ -329,6 +329,7 @@ record(ai, "$(P)$(Q):CHANFREQ") {
 }
 
 # % gdatag,binary,rw,$(gda_name=),DISABLE
+# % autosave 1 VAL
 record(bo, "$(P)$(Q):DISABLE") {
   field(DESC, "Disable comms")
   field(PINI, "YES")

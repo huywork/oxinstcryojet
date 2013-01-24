@@ -92,6 +92,7 @@ record(scalcout, "$(P):LEVEL") {
   field(EGU, "%")
 }
 
+# % autosave 1 VAL
 record(bo, "$(P):DISABLE") {
   field(DESC, "Disable comms")
   field(PINI, "YES")
