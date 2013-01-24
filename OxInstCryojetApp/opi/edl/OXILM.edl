@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 546
-y 246
+x 477
+y 488
 w 345
 h 140
 font "arial-medium-r-18.0"
@@ -245,7 +245,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 1
+minor 5
 release 0
 x 140
 y 70
@@ -263,6 +263,7 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+noExecuteClipMask
 endObjectProperties
 
 # (Exit Button)
@@ -376,28 +377,6 @@ value5 {
 }
 endObjectProperties
 
-# (Shell Command)
-object shellCmdClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 5
-y 110
-w 40
-h 20
-fgColor index 43
-bgColor index 3
-topShadowColor index 1
-botShadowColor index 11
-font "arial-bold-r-12.0"
-buttonLabel "Asyn"
-numCmds 1
-command {
-  0 "cd /home/diamond/R3.14.8.2/prod/support/asyn/4-6/medm; medm -x -macro \"P=$(CS),R=:RAWLEVEL\" asynRecord.adl"
-}
-endObjectProperties
-
 # (Button)
 object activeButtonClass
 beginObjectProperties
@@ -436,6 +415,32 @@ bgColor index 0
 useDisplayBg
 value {
   "Cryo fill level"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 5
+y 110
+w 50
+h 20
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-14.0"
+buttonLabel "Asyn"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "asynRecord.edl"
+}
+symbols {
+  0 "P=$(CS),R=:RAWLEVEL"
 }
 endObjectProperties
 

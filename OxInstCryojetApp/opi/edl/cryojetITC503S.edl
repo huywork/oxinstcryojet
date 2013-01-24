@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 193
-y 246
+x 677
+y 299
 w 390
 h 600
 font "arial-bold-r-14.0"
@@ -120,28 +120,6 @@ bgColor index 3
 useDisplayBg
 value {
   "1"
-}
-endObjectProperties
-
-# (Shell Command)
-object shellCmdClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 10
-y 570
-w 50
-h 20
-fgColor index 43
-bgColor index 3
-topShadowColor index 1
-botShadowColor index 11
-font "arial-bold-r-14.0"
-buttonLabel "Asyn"
-numCmds 1
-command {
-  0 "cd /dls_sw/prod/R3.14.8.2/support/asyn/4-9/medm;  medm -x -macro \"P=$(P)$(Q):,R=ASYN\" asynRecord.adl"
 }
 endObjectProperties
 
@@ -778,7 +756,6 @@ limitsFromDb
 nullColor index 14
 fastUpdate
 useHexPrefix
-showUnits
 newPos
 objType "monitors"
 noExecuteClipMask
@@ -803,7 +780,6 @@ limitsFromDb
 nullColor index 14
 fastUpdate
 useHexPrefix
-showUnits
 newPos
 objType "monitors"
 noExecuteClipMask
@@ -1053,6 +1029,35 @@ bgColor index 3
 useDisplayBg
 value {
   "3"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 10
+y 570
+w 50
+h 20
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-14.0"
+buttonLabel "Asyn"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "asynRecord.edl"
+}
+symbols {
+  0 "P=$(P)$(Q),R=:ASYN"
+}
+replaceSymbols {
+  0 1
 }
 endObjectProperties
 
