@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 677
-y 299
+x 314
+y 221
 w 390
 h 600
 font "arial-bold-r-14.0"
@@ -86,7 +86,7 @@ major 4
 minor 5
 release 0
 x 180
-y 80
+y 90
 w 70
 h 20
 controlPv "$(P)$(Q):STEMP"
@@ -111,10 +111,11 @@ major 4
 minor 1
 release 0
 x 160
-y 80
-w 20
+y 90
+w 10
 h 20
 font "arial-bold-r-14.0"
+fontAlign "right"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -151,11 +152,12 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 120
-y 160
-w 60
+x 40
+y 170
+w 130
 h 20
 font "arial-bold-r-14.0"
+fontAlign "right"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -171,7 +173,7 @@ major 4
 minor 5
 release 0
 x 180
-y 160
+y 170
 w 70
 h 20
 controlPv "$(P)$(Q):TEMP:ERR"
@@ -195,11 +197,12 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 120
-y 140
-w 60
+x 40
+y 150
+w 130
 h 20
 font "arial-bold-r-14.0"
+fontAlign "right"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -215,7 +218,7 @@ major 4
 minor 5
 release 0
 x 180
-y 140
+y 150
 w 70
 h 20
 controlPv "$(P)$(Q):TTEMP"
@@ -240,7 +243,7 @@ major 4
 minor 5
 release 0
 x 250
-y 140
+y 150
 w 70
 h 20
 controlPv "$(P)$(Q):TTEMP:SET"
@@ -266,7 +269,7 @@ major 4
 minor 5
 release 0
 x 250
-y 220
+y 230
 w 70
 h 20
 controlPv "$(P)$(Q):P:SET"
@@ -292,7 +295,7 @@ major 4
 minor 5
 release 0
 x 180
-y 220
+y 230
 w 70
 h 20
 controlPv "$(P)$(Q):P"
@@ -317,7 +320,7 @@ major 4
 minor 1
 release 0
 x 40
-y 220
+y 230
 w 140
 h 20
 font "arial-bold-r-14.0"
@@ -336,7 +339,7 @@ major 4
 minor 5
 release 0
 x 250
-y 240
+y 250
 w 70
 h 20
 controlPv "$(P)$(Q):I:SET"
@@ -362,7 +365,7 @@ major 4
 minor 5
 release 0
 x 180
-y 240
+y 250
 w 70
 h 20
 controlPv "$(P)$(Q):I"
@@ -387,7 +390,7 @@ major 4
 minor 1
 release 0
 x 40
-y 240
+y 250
 w 140
 h 20
 font "arial-bold-r-14.0"
@@ -406,7 +409,7 @@ major 4
 minor 5
 release 0
 x 180
-y 260
+y 270
 w 70
 h 20
 controlPv "$(P)$(Q):D"
@@ -431,7 +434,7 @@ major 4
 minor 1
 release 0
 x 40
-y 260
+y 270
 w 140
 h 20
 font "arial-bold-r-14.0"
@@ -450,7 +453,7 @@ major 4
 minor 5
 release 0
 x 120
-y 320
+y 330
 w 70
 h 20
 controlPv "$(P)$(Q):GFLOW"
@@ -475,7 +478,7 @@ major 4
 minor 5
 release 0
 x 190
-y 320
+y 330
 w 70
 h 20
 controlPv "$(P)$(Q):GFLOW:SET"
@@ -718,7 +721,7 @@ major 4
 minor 5
 release 0
 x 250
-y 260
+y 270
 w 70
 h 20
 controlPv "$(P)$(Q):D:SET"
@@ -836,7 +839,7 @@ major 4
 minor 1
 release 0
 x 10
-y 70
+y 60
 w 110
 h 20
 font "arial-bold-r-14.0"
@@ -855,7 +858,7 @@ major 4
 minor 1
 release 0
 x 10
-y 190
+y 200
 w 150
 h 20
 font "arial-bold-r-14.0"
@@ -874,7 +877,7 @@ major 4
 minor 1
 release 0
 x 10
-y 290
+y 300
 w 150
 h 20
 font "arial-bold-r-14.0"
@@ -951,7 +954,7 @@ major 4
 minor 5
 release 0
 x 180
-y 100
+y 110
 w 70
 h 20
 controlPv "$(P)$(Q):STEMP2"
@@ -976,7 +979,7 @@ major 4
 minor 5
 release 0
 x 180
-y 120
+y 130
 w 70
 h 20
 controlPv "$(P)$(Q):STEMP3"
@@ -1001,10 +1004,11 @@ major 4
 minor 1
 release 0
 x 160
-y 100
-w 20
+y 110
+w 10
 h 20
 font "arial-bold-r-14.0"
+fontAlign "right"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -1020,10 +1024,11 @@ major 4
 minor 1
 release 0
 x 160
-y 120
-w 20
+y 130
+w 10
 h 20
 font "arial-bold-r-14.0"
+fontAlign "right"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -1059,5 +1064,76 @@ symbols {
 replaceSymbols {
   0 1
 }
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 10
+y 130
+w 150
+h 20
+controlPv "$(P)$(Q):STEMP3:DESC"
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+fgAlarm
+bgColor index 3
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 10
+y 110
+w 150
+h 20
+controlPv "$(P)$(Q):STEMP2:DESC"
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+fgAlarm
+bgColor index 3
+useDisplayBg
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 10
+y 90
+w 150
+h 20
+controlPv "$(P)$(Q):STEMP:DESC"
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+fgAlarm
+bgColor index 3
+useDisplayBg
+nullColor index 14
+newPos
+objType "monitors"
 endObjectProperties
 
