@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 725
-y 655
+x 517
+y 531
 w 320
 h 100
 font "arial-medium-r-18.0"
@@ -32,9 +32,9 @@ beginObjectProperties
 major 4
 minor 5
 release 0
-x 120
+x 150
 y 30
-w 190
+w 160
 h 25
 controlPv "$(CS):LEVEL"
 font "arial-bold-r-14.0"
@@ -129,25 +129,6 @@ major 4
 minor 1
 release 0
 x 5
-y 30
-w 100
-h 25
-font "arial-bold-r-14.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Cryo fill level:"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 5
 y 5
 w 310
 h 20
@@ -184,5 +165,27 @@ displayFileName {
 symbols {
   0 "CS=$(CS)"
 }
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 5
+y 30
+w 140
+h 25
+controlPv "$(CS):LEVEL:DESC"
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
 endObjectProperties
 
