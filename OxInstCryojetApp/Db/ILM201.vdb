@@ -24,9 +24,10 @@
 # % macro, HIGH_LIMIT, Optional macro for HIGH value for LEVEL record. Defaults to 81
 # % macro, LOW_LIMIT, Optional macro for LOW value for LEVEL record. Defaults to 39
 # % macro, LOLO_LIMIT, Optional macro for LOLO value for LEVEL record. Defaults to 20.5
-# % macro, name, object and gui association name
-# % macro, gda_name, gda name
-# % macro, gda_desc, gda description
+# % macro, name, object and gui association name.  Optional.  No default.
+# % macro, gda_name, gda name.  Optional.  No default.
+# % macro, gda_desc, gda description.  Optional.  No default.
+# % macro, alh, Optional macro for alarm handler command. Defaults to alh.
 #
 #  User notes:
 #    This driver buffers the level responses from the device. If the device
