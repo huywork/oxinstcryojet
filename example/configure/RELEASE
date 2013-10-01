@@ -21,8 +21,8 @@ WORK=/dls_sw/work/R3.14.11/support
 
 # External module definitions (prod release).
 OXINSTCRYOJET=$(WORK)/OxInstCryojet
-ASYN=	$(SUPPORT)/asyn/4-19
-STREAM=	$(SUPPORT)/streamDevice/2-5dls1
+ASYN=	$(SUPPORT)/asyn/4-21
+STREAM=	$(SUPPORT)/streamDevice/2-5dls2
 # PYIOC=  $(SUPPORT)/pyIoc/1-2
 ##PYDRV=  $(SUPPORT)/pyDrv/1-2
 #SSCAN=  $(SUPPORT)/sscan/2-5-6dls1
