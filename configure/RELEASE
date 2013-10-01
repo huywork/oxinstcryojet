@@ -19,8 +19,8 @@ SUPPORT=/dls_sw/prod/R3.14.11/support
 #SNCSEQ=/home/diamond/R3.14.7/prod/support/seq/2-0-10
 
 # External module definitions (prod release).
-ASYN=		$(SUPPORT)/asyn/4-17
-STREAMS=	$(SUPPORT)/streamDevice/2-5
+ASYN=		$(SUPPORT)/asyn/4-19
+STREAMS=	$(SUPPORT)/streamDevice/2-5dls1
 CALC=		$(SUPPORT)/calc/2-8dls4
 
 # EPICS_BASE usually appears last so other apps can override stuff:
