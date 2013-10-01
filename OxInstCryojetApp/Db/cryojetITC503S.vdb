@@ -179,6 +179,7 @@ record(mbbo, "$(P)$(Q):CTRL:SET") {
   field(THST, "EPICS+FPUnlock")
 }
 
+#% archiver 10 Monitor
 record(ai, "$(P)$(Q):TTEMP") {
   field(DESC, "Get target temp")
   field(SCAN, "Passive")
@@ -238,6 +239,7 @@ record(ai, "$(P)$(Q):TEMP:ERR") {
   field(EGU, "K")
 }
 
+#% archiver 10 Monitor
 record(ai, "$(P)$(Q):HEATERP") {
   field(DESC, "Get heater %")
   field(SCAN, "Passive")
@@ -260,6 +262,7 @@ record(ai, "$(P)$(Q):HEATERV") {
   field(LOPR, "0")
 }
 
+#% archiver 10 Monitor
 record(ai, "$(P)$(Q):GFLOW") {
   field(DESC, "Get gas flow")
   field(SCAN, "Passive")
@@ -270,6 +273,7 @@ record(ai, "$(P)$(Q):GFLOW") {
   field(LOPR, "0")
 }
 
+#% archiver 10 Monitor
 record(ai, "$(P)$(Q):P") {
   field(DESC, "Get PID P")
   field(SCAN, "Passive")
@@ -280,6 +284,7 @@ record(ai, "$(P)$(Q):P") {
   field(LOPR, "0")
 }
 
+#% archiver 10 Monitor
 record(ai, "$(P)$(Q):I") {
   field(DESC, "Get PID I")
   field(SCAN, "Passive")
@@ -290,6 +295,7 @@ record(ai, "$(P)$(Q):I") {
   field(LOPR, "0")
 }
 
+#% archiver 10 Monitor
 record(ai, "$(P)$(Q):D") {
   field(DESC, "Get PID D")
   field(SCAN, "Passive")
