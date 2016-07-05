@@ -16,6 +16,10 @@ DB += cryojetITC503S.template
 DB += ILM201.template
 DB += ITC4.template
 DB += MercuryiTC-SCPI.template
+DB += MercuryiTC-SCPI_system.template
+DB += MercuryiTC-SCPI_heater.template
+DB += MercuryiTC-SCPI_tempSensor.template
+DB += MercuryiTC-SCPI_loop.template
 
 #----------------------------------------------------
 # In a Diamond IOC Application, build db files from

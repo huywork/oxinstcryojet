@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 604
-y 241
+x 608
+y 293
 w 770
 h 563
 font "arial-bold-r-14.0"
@@ -19,7 +19,7 @@ ctlBgColor1 index 3
 ctlBgColor2 index 3
 topShadowColor index 1
 botShadowColor index 11
-title "Cryojet"
+title "$(P)$(Q)"
 showGrid
 snapToGrid
 endScreenProperties
@@ -63,18 +63,18 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
-x 200
+release 1
+x 230
 y 10
-w 407
-h 20
+w 297
+h 21
 font "arial-bold-r-18.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Oxford Mercury ITC Control Loop Commands"
+  "Oxford Mercury ITC Control Loop"
 }
 autoSize
 endObjectProperties
@@ -83,10 +83,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 280
-y 130
+y 140
 w 350
 h 20
 controlPv "$(P)$(Q):READ_TEMP_LOOP_AUX"
@@ -109,9 +109,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 100
+y 110
 w 210
 h 20
 font "arial-bold-r-14.0"
@@ -128,9 +128,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 130
+y 140
 w 240
 h 20
 font "arial-bold-r-14.0"
@@ -147,9 +147,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 160
+y 170
 w 250
 h 20
 font "arial-bold-r-14.0"
@@ -166,9 +166,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 250
+y 260
 w 160
 h 20
 font "arial-bold-r-14.0"
@@ -185,9 +185,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 280
+y 290
 w 200
 h 20
 font "arial-bold-r-14.0"
@@ -204,9 +204,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 310
+y 320
 w 160
 h 20
 font "arial-bold-r-14.0"
@@ -223,9 +223,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 340
+y 350
 w 140
 h 20
 font "arial-bold-r-14.0"
@@ -242,9 +242,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 400
+y 410
 w 210
 h 20
 font "arial-bold-r-14.0"
@@ -261,9 +261,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 450
+y 460
 w 150
 h 20
 font "arial-bold-r-14.0"
@@ -279,10 +279,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 280
-y 160
+y 170
 w 350
 h 20
 controlPv "$(P)$(Q):READ_TEMP_LOOP_LVL"
@@ -304,10 +304,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 280
-y 190
+y 200
 w 350
 h 20
 controlPv "$(P)$(Q):READ_TEMP_LOOP_ENAB"
@@ -329,10 +329,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 280
-y 220
+y 230
 w 350
 h 20
 controlPv "$(P)$(Q):READ_TEMP_LOOP_HSET"
@@ -354,10 +354,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 280
-y 250
+y 260
 w 350
 h 20
 controlPv "$(P)$(Q):READ_TEMP_LOOP_TSET"
@@ -379,10 +379,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 280
-y 280
+y 290
 w 350
 h 20
 controlPv "$(P)$(Q):READ_TEMP_LOOP_PIDT"
@@ -404,10 +404,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 280
-y 310
+y 320
 w 350
 h 20
 controlPv "$(P)$(Q):READ_TEMP_LOOP_P"
@@ -429,10 +429,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 280
-y 340
+y 350
 w 350
 h 20
 controlPv "$(P)$(Q):READ_TEMP_LOOP_I"
@@ -454,10 +454,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 280
-y 100
+y 110
 w 350
 h 20
 controlPv "$(P)$(Q):READ_TEMP_LOOP_HTR"
@@ -482,7 +482,7 @@ major 4
 minor 0
 release 0
 x 640
-y 190
+y 200
 w 80
 h 20
 fgColor index 25
@@ -501,7 +501,7 @@ major 4
 minor 0
 release 0
 x 640
-y 280
+y 290
 w 80
 h 20
 fgColor index 25
@@ -517,10 +517,10 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 640
-y 100
+y 110
 w 110
 h 20
 controlPv "$(P)$(Q):SET_TEMP_LOOP_HTR"
@@ -541,10 +541,10 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 640
-y 130
+y 140
 w 110
 h 20
 controlPv "$(P)$(Q):SET_TEMP_LOOP_AUX"
@@ -566,9 +566,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 190
+y 200
 w 250
 h 20
 font "arial-bold-r-14.0"
@@ -585,9 +585,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 220
+y 230
 w 190
 h 20
 font "arial-bold-r-14.0"
@@ -603,10 +603,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 280
-y 450
+y 460
 w 350
 h 20
 controlPv "$(P)$(Q):READ_TEMP_LOOP_SWMD"
@@ -628,10 +628,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 280
-y 400
+y 410
 w 350
 h 20
 controlPv "$(P)$(Q):READ_TEMP_LOOP_SWFL"
@@ -654,9 +654,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 370
+y 380
 w 140
 h 20
 font "arial-bold-r-14.0"
@@ -672,10 +672,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 280
-y 370
+y 380
 w 350
 h 20
 controlPv "$(P)$(Q):READ_TEMP_LOOP_D"
@@ -697,10 +697,10 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 640
-y 160
+y 170
 w 110
 h 20
 controlPv "$(P)$(Q):SET_TEMP_LOOP_LVL"
@@ -721,10 +721,10 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 640
-y 220
+y 230
 w 110
 h 20
 controlPv "$(P)$(Q):SET_TEMP_LOOP_HSET"
@@ -745,10 +745,10 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 640
-y 250
+y 260
 w 110
 h 20
 controlPv "$(P)$(Q):SET_TEMP_LOOP_TSET"
@@ -772,7 +772,7 @@ major 4
 minor 0
 release 0
 x 640
-y 450
+y 460
 w 80
 h 20
 fgColor index 25
@@ -789,7 +789,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 390
 y 50
 w 80
@@ -808,7 +808,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 660
 y 50
 w 80
@@ -826,10 +826,10 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 640
-y 310
+y 320
 w 110
 h 20
 controlPv "$(P)$(Q):SET_TEMP_LOOP_P"
@@ -850,10 +850,10 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 640
-y 340
+y 350
 w 110
 h 20
 controlPv "$(P)$(Q):SET_TEMP_LOOP_I"
@@ -874,10 +874,10 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 640
-y 370
+y 380
 w 110
 h 20
 controlPv "$(P)$(Q):SET_TEMP_LOOP_D"
@@ -898,10 +898,10 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 640
-y 400
+y 410
 w 110
 h 20
 controlPv "$(P)$(Q):SET_TEMP_LOOP_SWFL"
@@ -923,9 +923,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 420
+y 430
 w 370
 h 20
 font "arial-bold-r-14.0"
@@ -934,6 +934,50 @@ bgColor index 3
 useDisplayBg
 value {
   "(/opt/OxfordInstruments/cryosys/sweep_tables/)"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 280
+y 80
+w 350
+h 20
+controlPv "$(P)$(Q):READ_TEMP_LOOP_HTR.DESC"
+font "arial-bold-r-14.0"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 20
+y 80
+w 150
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Module UID:"
 }
 endObjectProperties
 

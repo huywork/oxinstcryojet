@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 546
-y 84
+x 548
+y 110
 w 232
 h 320
 font "arial-bold-r-14.0"
@@ -19,7 +19,7 @@ ctlBgColor1 index 3
 ctlBgColor2 index 3
 topShadowColor index 1
 botShadowColor index 11
-title "Cryojet"
+title "$(P)$(Q)"
 showGrid
 snapToGrid
 endScreenProperties
@@ -63,11 +63,11 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 90
 y 10
 w 60
-h 20
+h 21
 font "arial-bold-r-18.0"
 fontAlign "center"
 fgColor index 14
@@ -83,7 +83,7 @@ endObjectProperties
 object shellCmdClass
 beginObjectProperties
 major 4
-minor 2
+minor 3
 release 0
 x 30
 y 220
@@ -105,7 +105,7 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 2
+minor 4
 release 0
 x 30
 y 60
@@ -128,7 +128,7 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 2
+minor 4
 release 0
 x 30
 y 100
@@ -151,7 +151,7 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 2
+minor 4
 release 0
 x 30
 y 140
@@ -174,7 +174,7 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 2
+minor 4
 release 0
 x 30
 y 180

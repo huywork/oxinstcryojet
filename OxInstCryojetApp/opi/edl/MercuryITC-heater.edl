@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1011
-y 49
+x 1015
+y 101
 w 722
 h 489
 font "arial-bold-r-14.0"
@@ -19,7 +19,7 @@ ctlBgColor1 index 3
 ctlBgColor2 index 3
 topShadowColor index 1
 botShadowColor index 11
-title "Cryojet"
+title "$(P)$(Q)"
 showGrid
 snapToGrid
 endScreenProperties
@@ -63,18 +63,18 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
-x 130
+release 1
+x 230
 y 10
-w 443
-h 20
+w 238
+h 21
 font "arial-bold-r-18.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Oxford Mercury ITC Heater Controller Commands"
+  "Oxford Mercury ITC Heater"
 }
 autoSize
 endObjectProperties
@@ -83,10 +83,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 230
-y 130
+y 140
 w 350
 h 20
 controlPv "$(P)$(Q):READ_HTR_FVER"
@@ -109,9 +109,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 100
+y 110
 w 150
 h 20
 font "arial-bold-r-14.0"
@@ -128,9 +128,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 130
+y 140
 w 220
 h 20
 font "arial-bold-r-14.0"
@@ -147,9 +147,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 160
+y 170
 w 150
 h 20
 font "arial-bold-r-14.0"
@@ -166,9 +166,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 250
+y 260
 w 160
 h 20
 font "arial-bold-r-14.0"
@@ -185,9 +185,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 280
+y 290
 w 200
 h 20
 font "arial-bold-r-14.0"
@@ -203,10 +203,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 230
-y 160
+y 170
 w 350
 h 20
 controlPv "$(P)$(Q):READ_HTR_SERL"
@@ -228,10 +228,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 230
-y 190
+y 200
 w 350
 h 20
 controlPv "$(P)$(Q):READ_HTR_NICK"
@@ -253,10 +253,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 230
-y 220
+y 230
 w 350
 h 20
 controlPv "$(P)$(Q):READ_HTR_VLIM"
@@ -278,10 +278,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 230
-y 250
+y 260
 w 350
 h 20
 controlPv "$(P)$(Q):READ_HTR_RES"
@@ -303,10 +303,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 230
-y 280
+y 290
 w 350
 h 20
 controlPv "$(P)$(Q):READ_HTR_PMAX"
@@ -328,10 +328,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 230
-y 100
+y 110
 w 350
 h 20
 controlPv "$(P)$(Q):READ_HTR_HVER"
@@ -353,10 +353,10 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 590
-y 190
+y 200
 w 110
 h 20
 controlPv "$(P)$(Q):SET_HTR_NICK"
@@ -377,10 +377,10 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 590
-y 220
+y 230
 w 110
 h 20
 controlPv "$(P)$(Q):SET_HTR_VLIM"
@@ -402,9 +402,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 190
+y 200
 w 150
 h 20
 font "arial-bold-r-14.0"
@@ -421,9 +421,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 220
+y 230
 w 150
 h 20
 font "arial-bold-r-14.0"
@@ -440,9 +440,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 310
+y 320
 w 150
 h 20
 font "arial-bold-r-14.0"
@@ -459,9 +459,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 340
+y 350
 w 150
 h 20
 font "arial-bold-r-14.0"
@@ -478,9 +478,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 370
+y 380
 w 150
 h 20
 font "arial-bold-r-14.0"
@@ -496,10 +496,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 230
-y 310
+y 320
 w 350
 h 20
 controlPv "$(P)$(Q):READ_HTR_SIG_VOLT"
@@ -521,10 +521,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 230
-y 340
+y 350
 w 350
 h 20
 controlPv "$(P)$(Q):READ_HTR_SIG_CURR"
@@ -546,10 +546,10 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 230
-y 370
+y 380
 w 350
 h 20
 controlPv "$(P)$(Q):READ_HTR_SIG_POWR"
@@ -571,10 +571,10 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 590
-y 250
+y 260
 w 110
 h 20
 controlPv "$(P)$(Q):SET_HTR_RES"
@@ -595,10 +595,10 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 590
-y 310
+y 320
 w 110
 h 20
 controlPv "$(P)$(Q):SET_HTR_SIG_VOLT"
@@ -619,10 +619,10 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 590
-y 370
+y 380
 w 110
 h 20
 controlPv "$(P)$(Q):SET_HTR_SIG_POWR"
@@ -644,7 +644,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 340
 y 50
 w 80
@@ -663,7 +663,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 610
 y 50
 w 80
@@ -674,6 +674,50 @@ bgColor index 3
 useDisplayBg
 value {
   "SET"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 230
+y 80
+w 350
+h 20
+controlPv "$(P)$(Q):READ_HTR_HVER.DESC"
+font "arial-bold-r-14.0"
+fgColor index 16
+fgAlarm
+bgColor index 10
+limitsFromDb
+nullColor index 14
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 20
+y 80
+w 150
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "Module UID:"
 }
 endObjectProperties
 
