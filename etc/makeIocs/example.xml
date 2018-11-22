@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<components arch="linux-x86">
+<components arch="linux-x86_64">
 	<asyn.AsynIP name="cryojetITC503SAsyn" port="172.23.111.180:7001" simulation="localhost:9001"/>
 	<asyn.AsynIP baud="9600" bits="8" name="cryojetAsyn" parity="None" port="172.23.111.180:7001" simulation="localhost:9001" stop="2"/>
 	<asyn.AsynIP baud="9600" bits="8" name="cryojetILMAsyn" parity="None" port="172.23.111.180:7001" stop="2"/>
