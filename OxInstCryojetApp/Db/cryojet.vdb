@@ -300,7 +300,7 @@ record(asyn, "$(P)$(Q):ASYN") {
 }
 
 record(seq, "$(P)$(Q):FAN1") {
-  field(SCAN, "10 second")
+  field(SCAN, "2 second")
   field(SDIS, "$(P)$(Q):DISABLE")
   field(SELM, "All")
   field(LNK1, "$(P)$(Q):P.PROC PP")
@@ -310,14 +310,12 @@ record(seq, "$(P)$(Q):FAN1") {
   field(LNK5, "$(P)$(Q):STEMP.PROC PP")
   field(LNK6, "$(P)$(Q):TEMP:ERR.PROC PP")
   field(LNK7, "$(P)$(Q):FAN2.PROC PP")
-  field(LNK8, "$(P)$(Q):FAN1.DESC")      
-  field(DLY2, "1.0")
-  field(DLY3, "1.0")
-  field(DLY4, "1.0")
-  field(DLY5, "1.0")
-  field(DLY6, "1.0")   
-  field(DLY7, "1.0")   
-  field(DLY8, "6.0")     
+  field(DLY2, "0.1")
+  field(DLY3, "0.1")
+  field(DLY4, "0.1")
+  field(DLY5, "0.1")
+  field(DLY6, "0.1")   
+  field(DLY7, "0.1")   
 }
 
 record(seq, "$(P)$(Q):FAN2") {
@@ -328,11 +326,11 @@ record(seq, "$(P)$(Q):FAN2") {
   field(LNK4, "$(P)$(Q):HEATERV.PROC PP")
   field(LNK5, "$(P)$(Q):ACTIVITY.PROC PP")
   field(LNK6, "$(P)$(Q):CHANFREQ.PROC PP")  
-  field(DLY2, "1.0")
-  field(DLY3, "1.0")
-  field(DLY4, "1.0")
-  field(DLY5, "1.0")
-  field(DLY6, "1.0")
+  field(DLY2, "0.1")
+  field(DLY3, "0.1")
+  field(DLY4, "0.1")
+  field(DLY5, "0.1")
+  field(DLY6, "0.1")
 }
 
 
