@@ -104,13 +104,19 @@ record(ao, "$(P)$(Q):MANV:SET") {
 }
 
 #% autosave 1 VAL
-record(bo, "$(P)$(Q):ACTIVITY:SET") {
+record(mbbo, "$(P)$(Q):ACTIVITY:SET") {
   field(DESC, "Set auto or man")
   field(SCAN, "Passive")
   field(DTYP, "stream")
   field(OUT, "@cjet.proto set_act $(PORT) 0")
-  field(ZNAM, "Manual")
-  field(ONAM, "Auto")
+  field(ZRST, "HeaterManual+GasManual")
+  field(ZRVL, "0")
+  field(ONST, "HeaterAuto+GasManual")
+  field(ONVL, "1")
+  field(TWST, "HeaterManual+GasAuto")
+  field(TWVL, "2")
+  field(THST, "HeaterAuto+GasAuto")
+  field(THVL, "3")
 }
 
 #% gdatag,pv,rw,$(gda_name=),TEMP_SET
@@ -126,13 +132,19 @@ record(ao, "$(P)$(Q):TTEMP:SET") {
   field(DRVL, "0")
 }
 
-record(bi, "$(P)$(Q):ACTIVITY") {
+record(mbbi, "$(P)$(Q):ACTIVITY") {
   field(DESC, "Get status")
   field(SCAN, "Passive")
   field(DTYP, "stream")
   field(INP, "@cjet.proto get_sta($(P)$(Q):CTRL) $(PORT) 0")
-  field(ZNAM, "Manual")
-  field(ONAM, "Auto")
+  field(ZRST, "HeaterManual+GasManual")
+  field(ZRVL, "0")
+  field(ONST, "HeaterAuto+GasManual")
+  field(ONVL, "1")
+  field(TWST, "HeaterManual+GasAuto")
+  field(TWVL, "2")
+  field(THST, "HeaterAuto+GasAuto")
+  field(THVL, "3")
 }
 
 record(mbbi, "$(P)$(Q):CTRL") {

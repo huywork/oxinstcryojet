@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 856
-y 531
-w 390
-h 530
+x 2780
+y 558
+w 400
+h 580
 font "arial-bold-r-14.0"
 ctlFont "arial-bold-r-14.0"
 btnFont "arial-bold-r-14.0"
@@ -46,7 +46,7 @@ major 4
 minor 1
 release 0
 x 290
-y 490
+y 540
 w 90
 h 30
 fgColor index 46
@@ -67,7 +67,7 @@ release 1
 x 150
 y 10
 w 60
-h 20
+h 21
 font "arial-bold-r-18.0"
 fontAlign "center"
 fgColor index 14
@@ -589,7 +589,7 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 210
+x 200
 y 330
 w 100
 h 20
@@ -608,7 +608,7 @@ beginObjectProperties
 major 4
 minor 6
 release 0
-x 310
+x 320
 y 330
 w 70
 h 20
@@ -634,8 +634,8 @@ beginObjectProperties
 major 4
 minor 6
 release 0
-x 250
-y 390
+x 320
+y 370
 w 70
 h 20
 controlPv "$(P)$(Q):MANV:SET"
@@ -660,9 +660,9 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 60
-y 390
-w 160
+x 200
+y 370
+w 120
 h 20
 font "arial-bold-r-14.0"
 fgColor index 14
@@ -679,9 +679,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 250
-y 370
-w 130
+x 40
+y 450
+w 250
 h 20
 fgColor index 25
 fgAlarm
@@ -699,8 +699,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 40
-y 370
+x 10
+y 400
 w 90
 h 20
 font "arial-bold-r-14.0"
@@ -832,9 +832,9 @@ beginObjectProperties
 major 4
 minor 6
 release 0
-x 120
-y 370
-w 130
+x 40
+y 420
+w 250
 h 20
 controlPv "$(P)$(Q):ACTIVITY"
 font "arial-bold-r-14.0"
@@ -858,7 +858,7 @@ major 4
 minor 6
 release 0
 x 120
-y 450
+y 510
 w 130
 h 20
 controlPv "$(P)$(Q):CTRL"
@@ -883,7 +883,7 @@ major 4
 minor 1
 release 1
 x 10
-y 420
+y 480
 w 160
 h 20
 font "arial-bold-r-14.0"
@@ -902,7 +902,7 @@ major 4
 minor 6
 release 0
 x 160
-y 420
+y 480
 w 90
 h 20
 controlPv "$(P)$(Q):CHANFREQ"
@@ -1003,7 +1003,7 @@ major 4
 minor 0
 release 0
 x 250
-y 450
+y 510
 w 130
 h 20
 fgColor index 25
@@ -1023,7 +1023,7 @@ major 4
 minor 1
 release 1
 x 10
-y 450
+y 510
 w 110
 h 20
 font "arial-bold-r-14.0"
@@ -1042,7 +1042,7 @@ major 4
 minor 0
 release 0
 x 10
-y 490
+y 540
 w 60
 h 20
 fgColor index 43

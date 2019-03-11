@@ -39,12 +39,12 @@ get_chnf{out"R11"; in"R%f"}
 get_sh_flo{out"R18"; in"R%f"}
 get_sa_flo{out"R19"; in"R%f"}
 
-get_sta{out"X"; in "X0%{A0|A1}%(\$1.VAL){C0|C1|C2|C3}"}
+get_sta{out"X"; in "X0%{A0|A1|A2|A3}%(\$1.VAL){C0|C1|C2|C3}"}
 
 
 #Control comamnds
 
-set_act{out"%{A0|A1}"; in "A"}
+set_act{out"%{A0|A1|A2|A3}"; in "A"}
 set_d{out"D%.1f"; in"D"}
 set_i{out"I%.1f"; in"I"}
 set_sh_flo{out"J%.1f"; in"J"}
