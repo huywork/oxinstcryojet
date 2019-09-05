@@ -2,6 +2,7 @@ from iocbuilder import AutoSubstitution
 from iocbuilder.modules.streamDevice import AutoProtocol
 from iocbuilder.modules.calc import Calc
 from iocbuilder.modules.asyn import Asyn
+from iocbuilder.arginfo import *
 
 class ILM201(AutoSubstitution):
     # Substitution attributes
