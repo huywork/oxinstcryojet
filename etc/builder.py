@@ -24,6 +24,25 @@ class cryojet(AutoSubstitution, AutoProtocol):
     ProtocolFiles = ['cjet.proto']
 
 
+class MercuryiTC_SCPI(AutoSubstitution):
+    
+    def __init__(self, P, Q, PORT):
+        self.P = P
+        self.Q = Q
+        self.PORT = PORT
+
+        heater = MercuryiTC_SCPI_heater(P=P, Q=Q, PORT=PORT)
+        loop = MercuryiTC_SCPI_loop(P=P, Q=Q, PORT=PORT)
+        system = MercuryiTC_SCPI_system(P=P, Q=Q, PORT=PORT)
+        tempSensor = MercuryiTC_SCPI_tempSensor(P=P, Q=Q, PORT=PORT)
+
+
+    ArgInfo = makeArgInfo(__init__,
+        P   = Simple('Main PV address', str),
+        Q     = Simple('Device Identifier', str),
+        PORT   = Simple('AsynIP port to connect to', str))
+
+
 class MercuryiTC_SCPI_heater(AutoSubstitution, AutoProtocol):
     Dependencies = (Asyn, Calc)
     # Substitution attributes
@@ -58,3 +77,4 @@ class MercuryiTC_SCPI_tempSensor(AutoSubstitution, AutoProtocol):
 
     # AutoProtocol attributes
     ProtocolFiles = ['MercuryiTC-SCPI.proto']
+
