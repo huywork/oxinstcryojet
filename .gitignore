@@ -8,3 +8,8 @@ lib
 .svn*
 iocs/*IOC*
 .idea
+iocs/example/
+iocs/example_sim/
+*~
+O.*
+documentation
