@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 2780
-y 558
+x 2823
+y 445
 w 400
 h 580
 font "arial-bold-r-14.0"
@@ -233,58 +233,6 @@ objType "monitors"
 noExecuteClipMask
 endObjectProperties
 
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 6
-release 0
-x 250
-y 100
-w 70
-h 20
-controlPv "$(P)$(Q):TTEMP:SET"
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-fgAlarm
-bgColor index 6
-editable
-limitsFromDb
-nullColor index 14
-useKp
-useHexPrefix
-newPos
-objType "controls"
-noExecuteClipMask
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 6
-release 0
-x 250
-y 170
-w 70
-h 20
-controlPv "$(P)$(Q):P:SET"
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-fgAlarm
-bgColor index 6
-editable
-limitsFromDb
-nullColor index 14
-useKp
-useHexPrefix
-newPos
-objType "controls"
-noExecuteClipMask
-endObjectProperties
-
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
@@ -327,32 +275,6 @@ useDisplayBg
 value {
   "Proportional Gain"
 }
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 6
-release 0
-x 250
-y 190
-w 70
-h 20
-controlPv "$(P)$(Q):I:SET"
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-fgAlarm
-bgColor index 6
-editable
-limitsFromDb
-nullColor index 14
-useKp
-useHexPrefix
-newPos
-objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Text Monitor)
@@ -487,32 +409,6 @@ value {
 }
 endObjectProperties
 
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 6
-release 0
-x 250
-y 260
-w 70
-h 20
-controlPv "$(P)$(Q):SAMPLEFLW:SET"
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-fgAlarm
-bgColor index 6
-editable
-limitsFromDb
-nullColor index 14
-useKp
-useHexPrefix
-newPos
-objType "controls"
-noExecuteClipMask
-endObjectProperties
-
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
@@ -557,32 +453,6 @@ value {
 }
 endObjectProperties
 
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 6
-release 0
-x 250
-y 280
-w 70
-h 20
-controlPv "$(P)$(Q):SHIELDFLW:SET"
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-fgAlarm
-bgColor index 6
-editable
-limitsFromDb
-nullColor index 14
-useKp
-useHexPrefix
-newPos
-objType "controls"
-noExecuteClipMask
-endObjectProperties
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
@@ -600,58 +470,6 @@ useDisplayBg
 value {
   "Voltage Limit"
 }
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 6
-release 0
-x 320
-y 330
-w 70
-h 20
-controlPv "$(P)$(Q):MAXV:SET"
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-fgAlarm
-bgColor index 6
-editable
-limitsFromDb
-nullColor index 14
-useKp
-useHexPrefix
-newPos
-objType "controls"
-noExecuteClipMask
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 6
-release 0
-x 320
-y 370
-w 70
-h 20
-controlPv "$(P)$(Q):MANV:SET"
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-fgAlarm
-bgColor index 6
-editable
-limitsFromDb
-nullColor index 14
-useKp
-useHexPrefix
-newPos
-objType "controls"
-noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -800,32 +618,6 @@ value {
 }
 endObjectProperties
 
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 6
-release 0
-x 250
-y 210
-w 70
-h 20
-controlPv "$(P)$(Q):D:SET"
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-fgAlarm
-bgColor index 6
-editable
-limitsFromDb
-nullColor index 14
-useKp
-useHexPrefix
-newPos
-objType "controls"
-noExecuteClipMask
-endObjectProperties
-
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
@@ -845,7 +637,6 @@ limitsFromDb
 nullColor index 14
 fastUpdate
 useHexPrefix
-showUnits
 newPos
 objType "monitors"
 noExecuteClipMask
@@ -870,7 +661,6 @@ limitsFromDb
 nullColor index 14
 fastUpdate
 useHexPrefix
-showUnits
 newPos
 objType "monitors"
 noExecuteClipMask
@@ -1059,5 +849,149 @@ displayFileName {
 symbols {
   0 "P=$(P),R=$(Q):ASYN"
 }
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 250
+y 100
+w 70
+h 20
+controlPv "$(P)$(Q):TTEMP:SET"
+fgColor index 14
+fgAlarm
+bgColor index 3
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 250
+y 170
+w 70
+h 20
+controlPv "$(P)$(Q):P:SET"
+fgColor index 14
+fgAlarm
+bgColor index 3
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 250
+y 190
+w 70
+h 20
+controlPv "$(P)$(Q):I:SET"
+fgColor index 14
+fgAlarm
+bgColor index 3
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 250
+y 210
+w 70
+h 20
+controlPv "$(P)$(Q):D:SET"
+fgColor index 14
+fgAlarm
+bgColor index 3
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 250
+y 280
+w 70
+h 20
+controlPv "$(P)$(Q):SHIELDFLW:SET"
+fgColor index 14
+fgAlarm
+bgColor index 3
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 250
+y 260
+w 70
+h 20
+controlPv "$(P)$(Q):SAMPLEFLW:SET"
+fgColor index 14
+fgAlarm
+bgColor index 3
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 310
+y 370
+w 70
+h 20
+controlPv "$(P)$(Q):MANV:SET"
+fgColor index 14
+fgAlarm
+bgColor index 3
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 310
+y 330
+w 70
+h 20
+controlPv "$(P)$(Q):MAXV:SET"
+fgColor index 14
+fgAlarm
+bgColor index 3
+fill
+font "arial-bold-r-14.0"
 endObjectProperties
 
