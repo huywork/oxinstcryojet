@@ -119,13 +119,19 @@ record(ao, "$(P)$(Q):MANV:SET") {
 }
 
 #% autosave 1 VAL
-record(bo, "$(P)$(Q):ACTIVITY:SET") {
+record(mbbo, "$(P)$(Q):ACTIVITY:SET") {
   field(DESC, "Set auto or man")
   field(SCAN, "Passive")
   field(DTYP, "stream")
   field(OUT, "@cjet.proto set_act $(PORT) 0")
-  field(ZNAM, "Manual")
-  field(ONAM, "Auto")
+  field(ZRST, "H Man G Man")
+  field(ZRVL, "0")
+  field(ONST, "H Auto G Man")
+  field(ONVL, "1")
+  field(TWST, "H Man G Auto")
+  field(TWVL, "2")
+  field(THST, "H Auto G Auto")
+  field(THVL, "3")
 }
 
 #% gdatag,pv,rw,$(gda_name=),TEMP_SET
@@ -141,13 +147,19 @@ record(ao, "$(P)$(Q):TTEMP:SET") {
   field(DRVL, "0")
 }
 
-record(bi, "$(P)$(Q):ACTIVITY") {
+record(mbbi, "$(P)$(Q):ACTIVITY") {
   field(DESC, "Get status")
   field(SCAN, "Passive")
   field(DTYP, "stream")
   field(INP, "@cjet.proto get_sta($(P)$(Q):CTRL) $(PORT) 0")
-  field(ZNAM, "Manual")
-  field(ONAM, "Auto")
+  field(ZRST, "H Man G Man")
+  field(ZRVL, "0")
+  field(ONST, "H Auto G Man")
+  field(ONVL, "1")
+  field(TWST, "H Man G Auto")
+  field(TWVL, "2")
+  field(THST, "H Auto G Auto")
+  field(THVL, "3")
 }
 
 record(mbbi, "$(P)$(Q):CTRL") {
