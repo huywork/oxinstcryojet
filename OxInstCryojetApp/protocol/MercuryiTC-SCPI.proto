@@ -581,7 +581,7 @@ SET_TEMP_LOOP_SWFL {
 READ_TEMP_LOOP_SWFL {
   ExtraInput = Ignore;
   out "READ:DEV:\$1:TEMP:LOOP:SWFL";
-  in  "STAT:DEV:\$1:TEMP:LOOP:SWFL:/opt/OxfordInstruments/cryosys/sweep_tables/%32c";
+  in "STAT:DEV:$1:TEMP:LOOP:SWFL:";
 }
 
 ############################################
