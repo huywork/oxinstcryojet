@@ -279,7 +279,7 @@ READ_TEMP_CAL_OFFS {
 # analogue in
 READ_TEMP_CAL_HOTL {
   out "READ:DEV:\$1:TEMP:CAL:HOTL";
-  in  "STAT:DEV:\$1:TEMP:CAL:HOTL:%f";
+  in  "STAT:DEV:\$1:TEMP:CAL:HOTL:%fK";
 }
 
 # stringin
@@ -310,7 +310,7 @@ READ_TEMP_SIG_POWR {
 # analogue in
 READ_TEMP_SIG_RES {
   out "READ:DEV:\$1:TEMP:SIG:RES";
-  in  "STAT:DEV:\$1:TEMP:SIG:RES:%fO";
+  in  "STAT:DEV:\$1:TEMP:SIG:RES:%fR";
 }
 
 # analogue in
@@ -322,7 +322,7 @@ READ_TEMP_SIG_TEMP {
 # analogue in
 READ_TEMP_SIG_SLOP {
   out "READ:DEV:\$1:TEMP:SIG:SLOP";
-  in  "STAT:DEV:\$1:TEMP:SIG:SLOP:%fO/K";
+  in  "STAT:DEV:\$1:TEMP:SIG:SLOP:%fR/K";
 }
 
 # Heater Controller commands
@@ -514,7 +514,7 @@ SET_TEMP_LOOP_TSET {
 # analogue in
 READ_TEMP_LOOP_TSET {
   out "READ:DEV:\$1:TEMP:LOOP:TSET";
-  in  "STAT:DEV:\$1:TEMP:LOOP:TSET:%f";
+  in  "STAT:DEV:\$1:TEMP:LOOP:TSET:%fK";
 }
 
 ############################################
