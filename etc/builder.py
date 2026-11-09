@@ -33,7 +33,8 @@ class MercuryiTC_SCPI(AutoSubstitution):
         self.PORT = PORT
 
         heater = MercuryiTC_SCPI_heater(P=P, Q=Q, PORT=PORT)
-        loop = MercuryiTC_SCPI_loop(P=P, Q=Q, PORT=PORT)
+        loop1 = MercuryiTC_SCPI_loop(P=P, Q=Q + ':LOOP', PORT=PORT, UID='DB4.T1')
+        loop2 = MercuryiTC_SCPI_loop(P=P, Q=Q + ':LOOP2', PORT=PORT, UID='DB7.T1')
         system = MercuryiTC_SCPI_system(P=P, Q=Q, PORT=PORT)
         tempSensor = MercuryiTC_SCPI_tempSensor(P=P, Q=Q, PORT=PORT)
 
@@ -55,6 +56,7 @@ class MercuryiTC_SCPI_heater(AutoSubstitution, AutoProtocol):
 
 class MercuryiTC_SCPI_loop(AutoSubstitution, AutoProtocol):
     Dependencies = (Asyn, Calc)
+
     # Substitution attributes
     TemplateFile = 'MercuryiTC-SCPI_loop.template'
 

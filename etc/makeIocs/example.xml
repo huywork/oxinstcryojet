@@ -6,4 +6,5 @@
 	<OxInstCryojet.ILM201 P="TESTILM" PORT="cryojetILMAsyn"/>
 	<OxInstCryojet.cryojetITC503S P="TESTTC503S" PORT="cjetAsyn" Q=""/>
 	<OxInstCryojet.cryojet P="TESTCJET" PORT="cjetAsyn" Q=""/>
+	<OxInstCryojet.MercuryiTC_SCPI P="BL11I-EA-MERC-01" Q="" PORT="cryojetITC503SAsyn"/>
 </components>
