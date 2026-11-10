@@ -26,31 +26,35 @@ class cryojet(AutoSubstitution, AutoProtocol):
 
 
 class MercuryiTC_SCPI(AutoSubstitution):
-    
+
     def __init__(self, P, Q, PORT):
         self.P = P
         self.Q = Q
         self.PORT = PORT
 
-        heater = MercuryiTC_SCPI_heater(P=P, Q=Q, PORT=PORT)
-        loop1 = MercuryiTC_SCPI_loop(P=P, Q=Q + ':LOOP', PORT=PORT, UID='DB4.T1')
-        loop2 = MercuryiTC_SCPI_loop(P=P, Q=Q + ':LOOP2', PORT=PORT, UID='DB7.T1')
-        system = MercuryiTC_SCPI_system(P=P, Q=Q, PORT=PORT)
-        tempSensor = MercuryiTC_SCPI_tempSensor(P=P, Q=Q, PORT=PORT)
-
+        heater = MercuryiTC_SCPI_heater(
+            P=P, Q=Q, PORT=PORT, UID='DB4.T1')
+        loop1 = MercuryiTC_SCPI_loop(
+            P=P, Q=Q + ':LOOP', PORT=PORT, UID='DB6.T1')
+        loop2 = MercuryiTC_SCPI_loop(
+            P=P, Q=Q + ':LOOP2', PORT=PORT, UID='DB7.T1')
+        system = MercuryiTC_SCPI_system(
+            P=P, Q=Q, PORT=PORT)
+        tempSensor = MercuryiTC_SCPI_tempSensor(
+            P=P, Q=Q, PORT=PORT, UID='DB4.T1')
 
     ArgInfo = makeArgInfo(__init__,
-        P   = Simple('Main PV address', str),
-        Q     = Simple('Device Identifier', str),
-        PORT   = Simple('AsynIP port to connect to', str))
+        P=Simple('Main PV address', str),
+        Q=Simple('Device Identifier', str),
+        PORT=Simple('AsynIP port to connect to', str))
 
 
 class MercuryiTC_SCPI_heater(AutoSubstitution, AutoProtocol):
     Dependencies = (Asyn, Calc)
-    # Substitution attributes
-    TemplateFile = 'MercuryiTC-SCPI_heater.template'
 
-    # AutoProtocol attributes
+    TemplateFile = 'MercuryiTC-SCPI_heater.template'
+    Arguments = ['P', 'Q', 'PORT', 'UID']
+
     ProtocolFiles = ['MercuryiTC-SCPI.proto']
 
 
@@ -59,6 +63,7 @@ class MercuryiTC_SCPI_loop(AutoSubstitution, AutoProtocol):
 
     # Substitution attributes
     TemplateFile = 'MercuryiTC-SCPI_loop.template'
+    Arguments = ['P', 'Q', 'PORT', 'UID']
 
     # AutoProtocol attributes
     ProtocolFiles = ['MercuryiTC-SCPI.proto']
@@ -77,6 +82,7 @@ class MercuryiTC_SCPI_tempSensor(AutoSubstitution, AutoProtocol):
     Dependencies = (Asyn, Calc)
     # Substitution attributes
     TemplateFile = 'MercuryiTC-SCPI_tempSensor.template'
+    Arguments = ['P', 'Q', 'PORT', 'UID']
 
     # AutoProtocol attributes
     ProtocolFiles = ['MercuryiTC-SCPI.proto']
