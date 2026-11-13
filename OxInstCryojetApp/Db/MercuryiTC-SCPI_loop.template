@@ -78,6 +78,32 @@ record(ai, "$(P)$(Q):READ_TEMP_LOOP_TSET") {
   field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_TSET($(UID=MB1.T1)) $(PORT)")
 }
 ##################################################################
+record(ao, "$(P)$(Q):SET_TEMP_LOOP_FSET") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_FSET($(UID=MB1.T1)) $(PORT)")
+}
+
+record(ai, "$(P)$(Q):READ_TEMP_LOOP_FSET") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_FSET($(UID=MB1.T1)) $(PORT)")
+}
+##################################################################
+record(mbbi, "$(P)$(Q):READ_TEMP_LOOP_FAUT") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(ZRST, "OFF")
+  field(ONST, "ON")
+  field(INP,  "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_FAUT($(UID=MB1.T1)) $(PORT)")
+}
+
+record(mbbo, "$(P)$(Q):SET_TEMP_LOOP_FAUT") {
+  field(DTYP, "stream")
+  field(ZRST, "OFF")
+  field(ONST, "ON")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_FAUT($(UID=MB1.T1)) $(PORT)")
+}
+##################################################################
 record(mbbi, "$(P)$(Q):READ_TEMP_LOOP_PIDT") {
   field(SCAN, "2 second")
   field(DTYP, "stream")
