@@ -81,6 +81,10 @@ record(ai, "$(P)$(Q):READ_TEMP_LOOP_TSET") {
 record(ao, "$(P)$(Q):SET_TEMP_LOOP_FSET") {
   field(DTYP, "stream")
   field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_FSET($(UID=MB1.T1)) $(PORT)")
+  # Disable FSET when FAUT (automatic flow) is ON
+  field(SDIS, "$(P)$(Q):READ_TEMP_LOOP_FAUT MS")
+  field(DISV, "1")
+  field(DISS, "INVALID")  
 }
 
 record(ai, "$(P)$(Q):READ_TEMP_LOOP_FSET") {
