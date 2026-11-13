@@ -491,8 +491,10 @@ SET_TEMP_LOOP_ENAB {
     @init { READ_TEMP_LOOP_ENAB; }
 }
 
+
 ############################################
 
+# Heater Setpoint commands
 # analogue out
 SET_TEMP_LOOP_HSET {
   out "SET:DEV:\$1:TEMP:LOOP:HSET:%f";
@@ -506,6 +508,7 @@ READ_TEMP_LOOP_HSET {
 
 ############################################
 
+# Temperature Setpoint commands
 # analogue out
 SET_TEMP_LOOP_TSET {
   out "SET:DEV:\$1:TEMP:LOOP:TSET:%f";
@@ -514,8 +517,38 @@ SET_TEMP_LOOP_TSET {
 # analogue in
 READ_TEMP_LOOP_TSET {
   out "READ:DEV:\$1:TEMP:LOOP:TSET";
-  in  "STAT:DEV:\$1:TEMP:LOOP:TSET:%fK";
+  in  "STAT:DEV:\$1:TEMP:LOOP:TSET:%#/K$//%f";
 }
+
+############################################
+
+# Flow Setpoint commands
+# analogue out
+SET_TEMP_LOOP_FSET {
+  out "SET:DEV:\$1:TEMP:LOOP:FSET:%f";
+}
+
+# analogue in
+READ_TEMP_LOOP_FSET {
+  out "READ:DEV:\$1:TEMP:LOOP:FSET";
+  in  "STAT:DEV:\$1:TEMP:LOOP:FSET:%f";
+}
+
+############################################
+
+# Flow auto mode commands
+# MBBI
+READ_TEMP_LOOP_FAUT {
+    out "READ:DEV:\$1:TEMP:LOOP:FAUT";
+    in  "STAT:DEV:\$1:TEMP:LOOP:FAUT:%{OFF|ON}";
+}
+
+# MBBO
+SET_TEMP_LOOP_FAUT {
+    out "SET:DEV:\$1:TEMP:LOOP:FAUT:%{OFF|ON}";
+    @init { READ_TEMP_LOOP_FAUT; }
+}
+
 
 ############################################
 
